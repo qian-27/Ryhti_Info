@@ -1,24 +1,18 @@
-//
-//  ContentView.swift
-//  Ryhti_Raketti
-//
-//  Created by Lucky on 29.11.2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        MainTabBar()
     }
 }
 
-#Preview {
+
+//#Preview {
+//    ContentView()
+//        .environment(\.locale, Locale(identifier: "en_EN"))
+//}
+
+#Preview("Finnish") {
     ContentView()
+        .environment(\.locale, Locale(identifier: "fi_FI"))
 }
