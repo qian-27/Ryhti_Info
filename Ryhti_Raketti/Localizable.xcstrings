@@ -1,6 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%@ %@, %@, Helsinki" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@, %3$@, Helsinki"
+          }
+        }
+      }
+    },
     "About the App" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -12,6 +22,18 @@
         }
       }
     },
+    "Basement Area: %@ m2" : {
+
+    },
+    "Building Location" : {
+
+    },
+    "Building Type: %@" : {
+
+    },
+    "Completion Date: %@" : {
+
+    },
     "Credit" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -22,6 +44,18 @@
           }
         }
       }
+    },
+    "East coordinate: %@" : {
+
+    },
+    "Elevator: %@" : {
+
+    },
+    "Error: %@" : {
+
+    },
+    "Floor Area: %@ m2" : {
+
     },
     "General" : {
       "extractionState" : "manual",
@@ -45,6 +79,12 @@
         }
       }
     },
+    "House Area: %@ m2" : {
+
+    },
+    "Information Update Date: %@" : {
+
+    },
     "Language" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -67,6 +107,15 @@
         }
       }
     },
+    "North coordinate: %@" : {
+
+    },
+    "Number of Flat: %@" : {
+
+    },
+    "Number of Floor: %@" : {
+
+    },
     "Privacy Policy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -78,6 +127,12 @@
         }
       }
     },
+    "Property Identifier: %@" : {
+
+    },
+    "Retry" : {
+
+    },
     "Search" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -88,6 +143,9 @@
           }
         }
       }
+    },
+    "Search View" : {
+
     },
     "Setting" : {
       "extractionState" : "manual",
@@ -110,6 +168,21 @@
           }
         }
       }
+    },
+    "State of Building: %@" : {
+
+    },
+    "Steert Name..." : {
+
+    },
+    "Total Area: %@ m2" : {
+
+    },
+    "Volume: %@ m3" : {
+
+    },
+    "VTJ-PRT: %@" : {
+
     }
   },
   "version" : "1.0"

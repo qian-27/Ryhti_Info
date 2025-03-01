@@ -39,3 +39,13 @@ struct Properties: Decodable {
     let paivitetty_tietopalveluun: Date?
     let tietopalvelu_id: Int!
 }
+
+extension Properties {
+    var latitude: CLLocationDegrees {
+        return Double(i_nkoord ?? 0)
+    }
+    
+    var longitude: CLLocationDegrees {
+        return Double(i_ekoord ?? 0)
+    }
+}
