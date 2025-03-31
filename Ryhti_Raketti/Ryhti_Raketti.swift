@@ -1,7 +1,8 @@
 import SwiftUI
 
 @main
-struct Ryhti_RakettiApp: App {
+struct Ryhti_Raketti
+: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

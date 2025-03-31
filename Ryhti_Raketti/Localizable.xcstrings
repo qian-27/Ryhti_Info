@@ -1,12 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "%@ %@, %@, Helsinki" : {
+    "%@, %@, %@, Helsinki" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%1$@ %2$@, %3$@, Helsinki"
+            "value" : "%1$@, %2$@, %3$@, Helsinki"
           }
         }
       }
@@ -22,16 +22,10 @@
         }
       }
     },
-    "Basement Area: %@ m2" : {
+    "API Test Running..." : {
 
     },
     "Building Location" : {
-
-    },
-    "Building Type: %@" : {
-
-    },
-    "Completion Date: %@" : {
 
     },
     "Credit" : {
@@ -45,16 +39,7 @@
         }
       }
     },
-    "East coordinate: %@" : {
-
-    },
-    "Elevator: %@" : {
-
-    },
     "Error: %@" : {
-
-    },
-    "Floor Area: %@ m2" : {
 
     },
     "General" : {
@@ -79,12 +64,6 @@
         }
       }
     },
-    "House Area: %@ m2" : {
-
-    },
-    "Information Update Date: %@" : {
-
-    },
     "Language" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -107,15 +86,6 @@
         }
       }
     },
-    "North coordinate: %@" : {
-
-    },
-    "Number of Flat: %@" : {
-
-    },
-    "Number of Floor: %@" : {
-
-    },
     "Privacy Policy" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -126,9 +96,6 @@
           }
         }
       }
-    },
-    "Property Identifier: %@" : {
-
     },
     "Retry" : {
 
@@ -169,19 +136,7 @@
         }
       }
     },
-    "State of Building: %@" : {
-
-    },
     "Steert Name..." : {
-
-    },
-    "Total Area: %@ m2" : {
-
-    },
-    "Volume: %@ m3" : {
-
-    },
-    "VTJ-PRT: %@" : {
 
     }
   },

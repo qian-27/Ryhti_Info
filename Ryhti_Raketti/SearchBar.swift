@@ -25,8 +25,18 @@ struct SearchBar: View {
             .padding(.trailing, 25)
         }
     }
+    
 }
 
+struct SearchBar_Previews: PreviewProvider {
+    @State static var text = "Street Name..."
+    static var previews: some View {
+        SearchBar(searchText: $text, onSearch: { print("Search triggered!") })
+            .previewLayout(.sizeThatFits)
+            .padding()
+            .foregroundStyle(.gray)
+    }
+}
 //#Preview {
 //    SearchBar()
 //}
