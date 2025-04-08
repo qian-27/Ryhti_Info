@@ -6,143 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		05B1B23A2D8872A600A21E2A /* libproj.25.9.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B1B2392D8872A600A21E2A /* libproj.25.9.5.1.dylib */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		05B1B1BB2D88706D00A21E2A /* libjpeg-turboConfig.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboConfig.cmake"; sourceTree = "<group>"; };
-		05B1B1BC2D88706D00A21E2A /* libjpeg-turboConfigVersion.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboConfigVersion.cmake"; sourceTree = "<group>"; };
-		05B1B1BD2D88706D00A21E2A /* libjpeg-turboTargets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboTargets.cmake"; sourceTree = "<group>"; };
-		05B1B1BE2D88706D00A21E2A /* libjpeg-turboTargets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboTargets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1C02D88706D00A21E2A /* proj-config.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-config.cmake"; sourceTree = "<group>"; };
-		05B1B1C12D88706D00A21E2A /* proj-config-version.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-config-version.cmake"; sourceTree = "<group>"; };
-		05B1B1C22D88706D00A21E2A /* proj-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets.cmake"; sourceTree = "<group>"; };
-		05B1B1C32D88706D00A21E2A /* proj-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1C42D88706D00A21E2A /* proj4-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets.cmake"; sourceTree = "<group>"; };
-		05B1B1C52D88706D00A21E2A /* proj4-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1C72D88706D00A21E2A /* proj-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets.cmake"; sourceTree = "<group>"; };
-		05B1B1C82D88706D00A21E2A /* proj-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1C92D88706D00A21E2A /* proj4-config.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-config.cmake"; sourceTree = "<group>"; };
-		05B1B1CA2D88706D00A21E2A /* proj4-config-version.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-config-version.cmake"; sourceTree = "<group>"; };
-		05B1B1CB2D88706D00A21E2A /* proj4-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets.cmake"; sourceTree = "<group>"; };
-		05B1B1CC2D88706D00A21E2A /* proj4-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1CE2D88706D00A21E2A /* zstdConfig.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdConfig.cmake; sourceTree = "<group>"; };
-		05B1B1CF2D88706D00A21E2A /* zstdConfigVersion.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdConfigVersion.cmake; sourceTree = "<group>"; };
-		05B1B1D02D88706D00A21E2A /* zstdTargets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdTargets.cmake; sourceTree = "<group>"; };
-		05B1B1D12D88706D00A21E2A /* zstdTargets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "zstdTargets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1D42D88706D00A21E2A /* libjpeg.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libjpeg.pc; sourceTree = "<group>"; };
-		05B1B1D52D88706D00A21E2A /* liblz4.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = liblz4.pc; sourceTree = "<group>"; };
-		05B1B1D62D88706D00A21E2A /* liblzma.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = liblzma.pc; sourceTree = "<group>"; };
-		05B1B1D72D88706D00A21E2A /* libtiff-4.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libtiff-4.pc"; sourceTree = "<group>"; };
-		05B1B1D82D88706D00A21E2A /* libturbojpeg.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libturbojpeg.pc; sourceTree = "<group>"; };
-		05B1B1D92D88706D00A21E2A /* libzstd.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libzstd.pc; sourceTree = "<group>"; };
-		05B1B1DA2D88706D00A21E2A /* proj.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = proj.pc; sourceTree = "<group>"; };
-		05B1B1DC2D88706D00A21E2A /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
-		05B1B1DD2D88706D00A21E2A /* libjpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.dylib; sourceTree = "<group>"; };
-		05B1B1DE2D88706D00A21E2A /* libjpeg.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.8.dylib; sourceTree = "<group>"; };
-		05B1B1DF2D88706D00A21E2A /* libjpeg.8.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.8.3.2.dylib; sourceTree = "<group>"; };
-		05B1B1E02D88706D00A21E2A /* liblz4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblz4.a; sourceTree = "<group>"; };
-		05B1B1E12D88706D00A21E2A /* liblz4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.dylib; sourceTree = "<group>"; };
-		05B1B1E22D88706D00A21E2A /* liblz4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.1.dylib; sourceTree = "<group>"; };
-		05B1B1E32D88706D00A21E2A /* liblz4.1.10.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.1.10.0.dylib; sourceTree = "<group>"; };
-		05B1B1E42D88706D00A21E2A /* liblzma.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma.a; sourceTree = "<group>"; };
-		05B1B1E52D88706D00A21E2A /* liblzma.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblzma.dylib; sourceTree = "<group>"; };
-		05B1B1E62D88706D00A21E2A /* liblzma.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblzma.5.dylib; sourceTree = "<group>"; };
-		05B1B1E72D88706D00A21E2A /* libproj.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libproj.a; sourceTree = "<group>"; };
-		05B1B1E82D88706D00A21E2A /* libproj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.dylib; sourceTree = "<group>"; };
-		05B1B1E92D88706D00A21E2A /* libproj.25.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.25.dylib; sourceTree = "<group>"; };
-		05B1B1EA2D88706D00A21E2A /* libproj.25.9.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.25.9.5.1.dylib; sourceTree = "<group>"; };
-		05B1B1EB2D88706D00A21E2A /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
-		05B1B1EC2D88706D00A21E2A /* libtiff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiff.dylib; sourceTree = "<group>"; };
-		05B1B1ED2D88706D00A21E2A /* libtiff.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiff.6.dylib; sourceTree = "<group>"; };
-		05B1B1EE2D88706D00A21E2A /* libtiffxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiffxx.a; sourceTree = "<group>"; };
-		05B1B1EF2D88706D00A21E2A /* libtiffxx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiffxx.dylib; sourceTree = "<group>"; };
-		05B1B1F02D88706D00A21E2A /* libtiffxx.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiffxx.6.dylib; sourceTree = "<group>"; };
-		05B1B1F12D88706D00A21E2A /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
-		05B1B1F22D88706D00A21E2A /* libturbojpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.dylib; sourceTree = "<group>"; };
-		05B1B1F32D88706D00A21E2A /* libturbojpeg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.0.dylib; sourceTree = "<group>"; };
-		05B1B1F42D88706D00A21E2A /* libturbojpeg.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.0.4.0.dylib; sourceTree = "<group>"; };
-		05B1B1F52D88706D00A21E2A /* libzstd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzstd.a; sourceTree = "<group>"; };
-		05B1B1F62D88706D00A21E2A /* libzstd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.dylib; sourceTree = "<group>"; };
-		05B1B1F72D88706D00A21E2A /* libzstd.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.1.dylib; sourceTree = "<group>"; };
-		05B1B1F82D88706D00A21E2A /* libzstd.1.5.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.1.5.6.dylib; sourceTree = "<group>"; };
-		05B1B1FA2D8870BB00A21E2A /* libjpeg-turboConfig.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboConfig.cmake"; sourceTree = "<group>"; };
-		05B1B1FB2D8870BB00A21E2A /* libjpeg-turboConfigVersion.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboConfigVersion.cmake"; sourceTree = "<group>"; };
-		05B1B1FC2D8870BB00A21E2A /* libjpeg-turboTargets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboTargets.cmake"; sourceTree = "<group>"; };
-		05B1B1FD2D8870BB00A21E2A /* libjpeg-turboTargets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libjpeg-turboTargets-release.cmake"; sourceTree = "<group>"; };
-		05B1B1FF2D8870BB00A21E2A /* proj-config.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-config.cmake"; sourceTree = "<group>"; };
-		05B1B2002D8870BB00A21E2A /* proj-config-version.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-config-version.cmake"; sourceTree = "<group>"; };
-		05B1B2012D8870BB00A21E2A /* proj-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets.cmake"; sourceTree = "<group>"; };
-		05B1B2022D8870BB00A21E2A /* proj-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B2032D8870BB00A21E2A /* proj4-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets.cmake"; sourceTree = "<group>"; };
-		05B1B2042D8870BB00A21E2A /* proj4-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B2062D8870BB00A21E2A /* proj-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets.cmake"; sourceTree = "<group>"; };
-		05B1B2072D8870BB00A21E2A /* proj-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B2082D8870BB00A21E2A /* proj4-config.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-config.cmake"; sourceTree = "<group>"; };
-		05B1B2092D8870BB00A21E2A /* proj4-config-version.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-config-version.cmake"; sourceTree = "<group>"; };
-		05B1B20A2D8870BB00A21E2A /* proj4-targets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets.cmake"; sourceTree = "<group>"; };
-		05B1B20B2D8870BB00A21E2A /* proj4-targets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "proj4-targets-release.cmake"; sourceTree = "<group>"; };
-		05B1B20D2D8870BB00A21E2A /* zstdConfig.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdConfig.cmake; sourceTree = "<group>"; };
-		05B1B20E2D8870BB00A21E2A /* zstdConfigVersion.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdConfigVersion.cmake; sourceTree = "<group>"; };
-		05B1B20F2D8870BB00A21E2A /* zstdTargets.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = zstdTargets.cmake; sourceTree = "<group>"; };
-		05B1B2102D8870BB00A21E2A /* zstdTargets-release.cmake */ = {isa = PBXFileReference; lastKnownFileType = text; path = "zstdTargets-release.cmake"; sourceTree = "<group>"; };
-		05B1B2132D8870BB00A21E2A /* libjpeg.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libjpeg.pc; sourceTree = "<group>"; };
-		05B1B2142D8870BB00A21E2A /* liblz4.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = liblz4.pc; sourceTree = "<group>"; };
-		05B1B2152D8870BB00A21E2A /* liblzma.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = liblzma.pc; sourceTree = "<group>"; };
-		05B1B2162D8870BB00A21E2A /* libtiff-4.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = "libtiff-4.pc"; sourceTree = "<group>"; };
-		05B1B2172D8870BB00A21E2A /* libturbojpeg.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libturbojpeg.pc; sourceTree = "<group>"; };
-		05B1B2182D8870BB00A21E2A /* libzstd.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = libzstd.pc; sourceTree = "<group>"; };
-		05B1B2192D8870BB00A21E2A /* proj.pc */ = {isa = PBXFileReference; lastKnownFileType = text; path = proj.pc; sourceTree = "<group>"; };
-		05B1B21B2D8870BB00A21E2A /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libjpeg.a; sourceTree = "<group>"; };
-		05B1B21C2D8870BB00A21E2A /* libjpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.dylib; sourceTree = "<group>"; };
-		05B1B21D2D8870BB00A21E2A /* libjpeg.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.8.dylib; sourceTree = "<group>"; };
-		05B1B21E2D8870BB00A21E2A /* libjpeg.8.3.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libjpeg.8.3.2.dylib; sourceTree = "<group>"; };
-		05B1B21F2D8870BB00A21E2A /* liblz4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblz4.a; sourceTree = "<group>"; };
-		05B1B2202D8870BB00A21E2A /* liblz4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.dylib; sourceTree = "<group>"; };
-		05B1B2212D8870BB00A21E2A /* liblz4.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.1.dylib; sourceTree = "<group>"; };
-		05B1B2222D8870BB00A21E2A /* liblz4.1.10.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblz4.1.10.0.dylib; sourceTree = "<group>"; };
-		05B1B2232D8870BB00A21E2A /* liblzma.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblzma.a; sourceTree = "<group>"; };
-		05B1B2242D8870BB00A21E2A /* liblzma.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblzma.dylib; sourceTree = "<group>"; };
-		05B1B2252D8870BB00A21E2A /* liblzma.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = liblzma.5.dylib; sourceTree = "<group>"; };
-		05B1B2262D8870BB00A21E2A /* libproj.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libproj.a; sourceTree = "<group>"; };
-		05B1B2272D8870BB00A21E2A /* libproj.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.dylib; sourceTree = "<group>"; };
-		05B1B2282D8870BB00A21E2A /* libproj.25.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.25.dylib; sourceTree = "<group>"; };
-		05B1B2292D8870BB00A21E2A /* libproj.25.9.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libproj.25.9.5.1.dylib; sourceTree = "<group>"; };
-		05B1B22A2D8870BB00A21E2A /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
-		05B1B22B2D8870BB00A21E2A /* libtiff.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiff.dylib; sourceTree = "<group>"; };
-		05B1B22C2D8870BB00A21E2A /* libtiff.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiff.6.dylib; sourceTree = "<group>"; };
-		05B1B22D2D8870BB00A21E2A /* libtiffxx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiffxx.a; sourceTree = "<group>"; };
-		05B1B22E2D8870BB00A21E2A /* libtiffxx.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiffxx.dylib; sourceTree = "<group>"; };
-		05B1B22F2D8870BB00A21E2A /* libtiffxx.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtiffxx.6.dylib; sourceTree = "<group>"; };
-		05B1B2302D8870BB00A21E2A /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libturbojpeg.a; sourceTree = "<group>"; };
-		05B1B2312D8870BB00A21E2A /* libturbojpeg.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.dylib; sourceTree = "<group>"; };
-		05B1B2322D8870BB00A21E2A /* libturbojpeg.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.0.dylib; sourceTree = "<group>"; };
-		05B1B2332D8870BB00A21E2A /* libturbojpeg.0.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libturbojpeg.0.4.0.dylib; sourceTree = "<group>"; };
-		05B1B2342D8870BB00A21E2A /* libzstd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzstd.a; sourceTree = "<group>"; };
-		05B1B2352D8870BB00A21E2A /* libzstd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.dylib; sourceTree = "<group>"; };
-		05B1B2362D8870BB00A21E2A /* libzstd.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.1.dylib; sourceTree = "<group>"; };
-		05B1B2372D8870BB00A21E2A /* libzstd.1.5.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libzstd.1.5.6.dylib; sourceTree = "<group>"; };
-		05B1B2392D8872A600A21E2A /* libproj.25.9.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libproj.25.9.5.1.dylib; path = ../../../../opt/homebrew/Cellar/proj/9.5.1/lib/libproj.25.9.5.1.dylib; sourceTree = "<group>"; };
 		05B6CCA32CF9CC2C00960D42 /* Ryhti_Raketti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryhti_Raketti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		05B1B2402D887D1F00A21E2A /* Exceptions for "Ryhti_Raketti" folder in "Compile Sources" phase from "Ryhti_Raketti" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 05B6CC9F2CF9CC2C00960D42 /* Sources */;
-			membershipExceptions = (
-				"Ryhti-Bridging-Header.h",
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		05B6CCA52CF9CC2C00960D42 /* Ryhti_Raketti */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				05B1B2402D887D1F00A21E2A /* Exceptions for "Ryhti_Raketti" folder in "Compile Sources" phase from "Ryhti_Raketti" target */,
-			);
 			path = Ryhti_Raketti;
 			sourceTree = "<group>";
 		};
@@ -153,7 +23,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05B1B23A2D8872A600A21E2A /* libproj.25.9.5.1.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,235 +32,8 @@
 		05AACFD42D886C1800A81EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				05B1B2392D8872A600A21E2A /* libproj.25.9.5.1.dylib */,
-				05B1B2382D8870BB00A21E2A /* lib */,
-				05B1B1F92D88706D00A21E2A /* lib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		05B1B1BF2D88706D00A21E2A /* libjpeg-turbo */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1BB2D88706D00A21E2A /* libjpeg-turboConfig.cmake */,
-				05B1B1BC2D88706D00A21E2A /* libjpeg-turboConfigVersion.cmake */,
-				05B1B1BD2D88706D00A21E2A /* libjpeg-turboTargets.cmake */,
-				05B1B1BE2D88706D00A21E2A /* libjpeg-turboTargets-release.cmake */,
-			);
-			path = "libjpeg-turbo";
-			sourceTree = "<group>";
-		};
-		05B1B1C62D88706D00A21E2A /* proj */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1C02D88706D00A21E2A /* proj-config.cmake */,
-				05B1B1C12D88706D00A21E2A /* proj-config-version.cmake */,
-				05B1B1C22D88706D00A21E2A /* proj-targets.cmake */,
-				05B1B1C32D88706D00A21E2A /* proj-targets-release.cmake */,
-				05B1B1C42D88706D00A21E2A /* proj4-targets.cmake */,
-				05B1B1C52D88706D00A21E2A /* proj4-targets-release.cmake */,
-			);
-			path = proj;
-			sourceTree = "<group>";
-		};
-		05B1B1CD2D88706D00A21E2A /* proj4 */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1C72D88706D00A21E2A /* proj-targets.cmake */,
-				05B1B1C82D88706D00A21E2A /* proj-targets-release.cmake */,
-				05B1B1C92D88706D00A21E2A /* proj4-config.cmake */,
-				05B1B1CA2D88706D00A21E2A /* proj4-config-version.cmake */,
-				05B1B1CB2D88706D00A21E2A /* proj4-targets.cmake */,
-				05B1B1CC2D88706D00A21E2A /* proj4-targets-release.cmake */,
-			);
-			path = proj4;
-			sourceTree = "<group>";
-		};
-		05B1B1D22D88706D00A21E2A /* zstd */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1CE2D88706D00A21E2A /* zstdConfig.cmake */,
-				05B1B1CF2D88706D00A21E2A /* zstdConfigVersion.cmake */,
-				05B1B1D02D88706D00A21E2A /* zstdTargets.cmake */,
-				05B1B1D12D88706D00A21E2A /* zstdTargets-release.cmake */,
-			);
-			path = zstd;
-			sourceTree = "<group>";
-		};
-		05B1B1D32D88706D00A21E2A /* cmake */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1BF2D88706D00A21E2A /* libjpeg-turbo */,
-				05B1B1C62D88706D00A21E2A /* proj */,
-				05B1B1CD2D88706D00A21E2A /* proj4 */,
-				05B1B1D22D88706D00A21E2A /* zstd */,
-			);
-			path = cmake;
-			sourceTree = "<group>";
-		};
-		05B1B1DB2D88706D00A21E2A /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1D42D88706D00A21E2A /* libjpeg.pc */,
-				05B1B1D52D88706D00A21E2A /* liblz4.pc */,
-				05B1B1D62D88706D00A21E2A /* liblzma.pc */,
-				05B1B1D72D88706D00A21E2A /* libtiff-4.pc */,
-				05B1B1D82D88706D00A21E2A /* libturbojpeg.pc */,
-				05B1B1D92D88706D00A21E2A /* libzstd.pc */,
-				05B1B1DA2D88706D00A21E2A /* proj.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		05B1B1F92D88706D00A21E2A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1D32D88706D00A21E2A /* cmake */,
-				05B1B1DB2D88706D00A21E2A /* pkgconfig */,
-				05B1B1DC2D88706D00A21E2A /* libjpeg.a */,
-				05B1B1DD2D88706D00A21E2A /* libjpeg.dylib */,
-				05B1B1DE2D88706D00A21E2A /* libjpeg.8.dylib */,
-				05B1B1DF2D88706D00A21E2A /* libjpeg.8.3.2.dylib */,
-				05B1B1E02D88706D00A21E2A /* liblz4.a */,
-				05B1B1E12D88706D00A21E2A /* liblz4.dylib */,
-				05B1B1E22D88706D00A21E2A /* liblz4.1.dylib */,
-				05B1B1E32D88706D00A21E2A /* liblz4.1.10.0.dylib */,
-				05B1B1E42D88706D00A21E2A /* liblzma.a */,
-				05B1B1E52D88706D00A21E2A /* liblzma.dylib */,
-				05B1B1E62D88706D00A21E2A /* liblzma.5.dylib */,
-				05B1B1E72D88706D00A21E2A /* libproj.a */,
-				05B1B1E82D88706D00A21E2A /* libproj.dylib */,
-				05B1B1E92D88706D00A21E2A /* libproj.25.dylib */,
-				05B1B1EA2D88706D00A21E2A /* libproj.25.9.5.1.dylib */,
-				05B1B1EB2D88706D00A21E2A /* libtiff.a */,
-				05B1B1EC2D88706D00A21E2A /* libtiff.dylib */,
-				05B1B1ED2D88706D00A21E2A /* libtiff.6.dylib */,
-				05B1B1EE2D88706D00A21E2A /* libtiffxx.a */,
-				05B1B1EF2D88706D00A21E2A /* libtiffxx.dylib */,
-				05B1B1F02D88706D00A21E2A /* libtiffxx.6.dylib */,
-				05B1B1F12D88706D00A21E2A /* libturbojpeg.a */,
-				05B1B1F22D88706D00A21E2A /* libturbojpeg.dylib */,
-				05B1B1F32D88706D00A21E2A /* libturbojpeg.0.dylib */,
-				05B1B1F42D88706D00A21E2A /* libturbojpeg.0.4.0.dylib */,
-				05B1B1F52D88706D00A21E2A /* libzstd.a */,
-				05B1B1F62D88706D00A21E2A /* libzstd.dylib */,
-				05B1B1F72D88706D00A21E2A /* libzstd.1.dylib */,
-				05B1B1F82D88706D00A21E2A /* libzstd.1.5.6.dylib */,
-			);
-			name = lib;
-			path = ../../../../opt/homebrew/lib;
-			sourceTree = "<group>";
-		};
-		05B1B1FE2D8870BB00A21E2A /* libjpeg-turbo */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1FA2D8870BB00A21E2A /* libjpeg-turboConfig.cmake */,
-				05B1B1FB2D8870BB00A21E2A /* libjpeg-turboConfigVersion.cmake */,
-				05B1B1FC2D8870BB00A21E2A /* libjpeg-turboTargets.cmake */,
-				05B1B1FD2D8870BB00A21E2A /* libjpeg-turboTargets-release.cmake */,
-			);
-			path = "libjpeg-turbo";
-			sourceTree = "<group>";
-		};
-		05B1B2052D8870BB00A21E2A /* proj */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1FF2D8870BB00A21E2A /* proj-config.cmake */,
-				05B1B2002D8870BB00A21E2A /* proj-config-version.cmake */,
-				05B1B2012D8870BB00A21E2A /* proj-targets.cmake */,
-				05B1B2022D8870BB00A21E2A /* proj-targets-release.cmake */,
-				05B1B2032D8870BB00A21E2A /* proj4-targets.cmake */,
-				05B1B2042D8870BB00A21E2A /* proj4-targets-release.cmake */,
-			);
-			path = proj;
-			sourceTree = "<group>";
-		};
-		05B1B20C2D8870BB00A21E2A /* proj4 */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B2062D8870BB00A21E2A /* proj-targets.cmake */,
-				05B1B2072D8870BB00A21E2A /* proj-targets-release.cmake */,
-				05B1B2082D8870BB00A21E2A /* proj4-config.cmake */,
-				05B1B2092D8870BB00A21E2A /* proj4-config-version.cmake */,
-				05B1B20A2D8870BB00A21E2A /* proj4-targets.cmake */,
-				05B1B20B2D8870BB00A21E2A /* proj4-targets-release.cmake */,
-			);
-			path = proj4;
-			sourceTree = "<group>";
-		};
-		05B1B2112D8870BB00A21E2A /* zstd */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B20D2D8870BB00A21E2A /* zstdConfig.cmake */,
-				05B1B20E2D8870BB00A21E2A /* zstdConfigVersion.cmake */,
-				05B1B20F2D8870BB00A21E2A /* zstdTargets.cmake */,
-				05B1B2102D8870BB00A21E2A /* zstdTargets-release.cmake */,
-			);
-			path = zstd;
-			sourceTree = "<group>";
-		};
-		05B1B2122D8870BB00A21E2A /* cmake */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B1FE2D8870BB00A21E2A /* libjpeg-turbo */,
-				05B1B2052D8870BB00A21E2A /* proj */,
-				05B1B20C2D8870BB00A21E2A /* proj4 */,
-				05B1B2112D8870BB00A21E2A /* zstd */,
-			);
-			path = cmake;
-			sourceTree = "<group>";
-		};
-		05B1B21A2D8870BB00A21E2A /* pkgconfig */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B2132D8870BB00A21E2A /* libjpeg.pc */,
-				05B1B2142D8870BB00A21E2A /* liblz4.pc */,
-				05B1B2152D8870BB00A21E2A /* liblzma.pc */,
-				05B1B2162D8870BB00A21E2A /* libtiff-4.pc */,
-				05B1B2172D8870BB00A21E2A /* libturbojpeg.pc */,
-				05B1B2182D8870BB00A21E2A /* libzstd.pc */,
-				05B1B2192D8870BB00A21E2A /* proj.pc */,
-			);
-			path = pkgconfig;
-			sourceTree = "<group>";
-		};
-		05B1B2382D8870BB00A21E2A /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				05B1B2122D8870BB00A21E2A /* cmake */,
-				05B1B21A2D8870BB00A21E2A /* pkgconfig */,
-				05B1B21B2D8870BB00A21E2A /* libjpeg.a */,
-				05B1B21C2D8870BB00A21E2A /* libjpeg.dylib */,
-				05B1B21D2D8870BB00A21E2A /* libjpeg.8.dylib */,
-				05B1B21E2D8870BB00A21E2A /* libjpeg.8.3.2.dylib */,
-				05B1B21F2D8870BB00A21E2A /* liblz4.a */,
-				05B1B2202D8870BB00A21E2A /* liblz4.dylib */,
-				05B1B2212D8870BB00A21E2A /* liblz4.1.dylib */,
-				05B1B2222D8870BB00A21E2A /* liblz4.1.10.0.dylib */,
-				05B1B2232D8870BB00A21E2A /* liblzma.a */,
-				05B1B2242D8870BB00A21E2A /* liblzma.dylib */,
-				05B1B2252D8870BB00A21E2A /* liblzma.5.dylib */,
-				05B1B2262D8870BB00A21E2A /* libproj.a */,
-				05B1B2272D8870BB00A21E2A /* libproj.dylib */,
-				05B1B2282D8870BB00A21E2A /* libproj.25.dylib */,
-				05B1B2292D8870BB00A21E2A /* libproj.25.9.5.1.dylib */,
-				05B1B22A2D8870BB00A21E2A /* libtiff.a */,
-				05B1B22B2D8870BB00A21E2A /* libtiff.dylib */,
-				05B1B22C2D8870BB00A21E2A /* libtiff.6.dylib */,
-				05B1B22D2D8870BB00A21E2A /* libtiffxx.a */,
-				05B1B22E2D8870BB00A21E2A /* libtiffxx.dylib */,
-				05B1B22F2D8870BB00A21E2A /* libtiffxx.6.dylib */,
-				05B1B2302D8870BB00A21E2A /* libturbojpeg.a */,
-				05B1B2312D8870BB00A21E2A /* libturbojpeg.dylib */,
-				05B1B2322D8870BB00A21E2A /* libturbojpeg.0.dylib */,
-				05B1B2332D8870BB00A21E2A /* libturbojpeg.0.4.0.dylib */,
-				05B1B2342D8870BB00A21E2A /* libzstd.a */,
-				05B1B2352D8870BB00A21E2A /* libzstd.dylib */,
-				05B1B2362D8870BB00A21E2A /* libzstd.1.dylib */,
-				05B1B2372D8870BB00A21E2A /* libzstd.1.5.6.dylib */,
-			);
-			name = lib;
-			path = ../../../../opt/homebrew/lib;
 			sourceTree = "<group>";
 		};
 		05B6CC9A2CF9CC2C00960D42 = {
@@ -444,7 +86,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1620;
+				LastUpgradeCheck = 1630;
 				TargetAttributes = {
 					05B6CCA22CF9CC2C00960D42 = {
 						CreatedOnToolsVersion = 16.1;
@@ -529,6 +171,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UTC5WLX74U;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -594,6 +237,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UTC5WLX74U;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -625,10 +269,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ryhti_Raketti/Preview Content\"";
-				DEVELOPMENT_TEAM = UTC5WLX74U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = /opt/homebrew/include;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -638,15 +281,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/opt/homebrew/Cellar/proj/9.5.1/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liuweiluo.Ryhti-Raketti";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Ryhti_Raketti/Ryhti-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,10 +302,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Ryhti_Raketti/Preview Content\"";
-				DEVELOPMENT_TEAM = UTC5WLX74U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = /opt/homebrew/include;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -675,15 +314,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					/opt/homebrew/lib,
-					/opt/homebrew/Cellar/proj/9.5.1/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liuweiluo.Ryhti-Raketti";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "Ryhti_Raketti/Ryhti-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

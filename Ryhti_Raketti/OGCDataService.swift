@@ -230,6 +230,91 @@
 ////}
 
 
+//import Foundation
+//import Combine
+//
+//// Helper function to build the URL with a manually specified percent-encoded query.
+//func buildURL(for streetName: String) -> URL? {
+//    let baseURLString = "https://paikkatiedot.ymparisto.fi/geoserver/ryhti_building/ogc/features/v1/collections/open_address/items"
+//    guard var components = URLComponents(string: baseURLString) else { return nil }
+//    
+//    // Create the filter expression in plain text.
+//    // For example, if streetName is "Ylikorvantie", the filter becomes:
+//    // "address_fin ILIKE '%Ylikorvantie%'"
+//    let filterExpression = "address_fin ILIKE '%\(streetName)%'"
+//    
+//    // Encode the filter expression.
+//    guard let encodedFilter = filterExpression.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+//        return nil
+//    }
+//    
+//    // Manually build the entire query string so that the f parameter remains exactly as desired.
+//    // We want: f=application/geo%2Bjson&filter-lang=cql-text&filter=<encodedFilter>
+//    let queryString = "f=application/geo%2Bjson&filter-lang=cql-text&filter=\(encodedFilter)"
+//    
+//    // Assign the manually built query string.
+//    components.percentEncodedQuery = queryString
+//    
+//    return components.url
+//}
+//
+//// Example usage to check URL construction.
+////if let url = buildURL(for: "Ylikorvantie") {
+////    print("Constructed URL:", url.absoluteString)
+////}
+//
+//class OGCDataService {
+//    func fetchBuildings(streetName: String, completion: @escaping (Result<[Feature], Error>) -> Void) {
+//        // Build the URL using the helper function.
+//        guard let url = buildURL(for: streetName) else {
+//            completion(.failure(NSError(domain: "", code: 0,
+//                                        userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])))
+//            return
+//        }
+//        
+//        print("Constructed URL: \(url.absoluteString)")
+//        
+//        // Start the API request.
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let error = error {
+//                print("Error fetching data:", error)
+//                completion(.failure(error))
+//                return
+//            }
+//            
+//            guard let data = data else {
+//                completion(.failure(NSError(domain: "", code: 0,
+//                                            userInfo: [NSLocalizedDescriptionKey: "No data received"])))
+//                return
+//            }
+//            
+//            // Print raw JSON for debugging.
+//            if let jsonString = String(data: data, encoding: .utf8) {
+//                print("Raw JSON data:\n\(jsonString)")
+//            }
+//            
+//            do {
+//                let decoder = JSONDecoder()
+//                decoder.dateDecodingStrategy = .iso8601
+//                let featureCollection = try decoder.decode(FeatureCollection.self, from: data)
+//                print("Decoded features count: \(featureCollection.features.count)")
+//                
+//                if featureCollection.features.isEmpty {
+//                    print("No features found in the response.")
+//                } else {
+//                    print("First feature sample: \(String(describing: featureCollection.features.first))")
+//                }
+//                
+//                completion(.success(featureCollection.features))
+//            } catch {
+//                print("Decoding error:", error)
+//                completion(.failure(error))
+//            }
+//        }.resume()
+//    }
+//}
+
+
 import Foundation
 import Combine
 
@@ -258,10 +343,6 @@ func buildURL(for streetName: String) -> URL? {
     return components.url
 }
 
-// Example usage to check URL construction.
-//if let url = buildURL(for: "Ylikorvantie") {
-//    print("Constructed URL:", url.absoluteString)
-//}
 
 class OGCDataService {
     func fetchBuildings(streetName: String, completion: @escaping (Result<[Feature], Error>) -> Void) {
