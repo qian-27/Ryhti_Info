@@ -5,22 +5,16 @@ struct MainTabBar: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-            
-            Text("Search View")
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
-            
             MapView()
                 .tabItem {
                     Image(systemName: "globe")
                     Text("Map")
+                }
+            
+            SearchView()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
             
             SettingsView()

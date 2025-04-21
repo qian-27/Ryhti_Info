@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HomeView: View {
+struct SearchView: View {
     @State private var searchText: String = ""
     
     var body: some View {
@@ -16,5 +16,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    SearchView()
 }
