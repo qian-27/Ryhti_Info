@@ -5,11 +5,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack{
-            ScrollView {
-                LazyVStack {
-                    TestListView()
-                }
-            }
+            TestListView()
         }
     }
     // Search logic
