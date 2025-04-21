@@ -11,7 +11,7 @@ struct MainTabBar: View {
                     Text("Map")
                 }
             
-            SearchView()
+            TestListView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
