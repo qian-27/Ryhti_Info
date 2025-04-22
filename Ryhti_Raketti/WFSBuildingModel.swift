@@ -17,7 +17,7 @@
 //}
 //
 //struct Properties: Decodable {
-//    
+//
 //    let vtj_prt: String?
 //    let tyyppi: String?
 //    let tila: String?
@@ -44,7 +44,7 @@
 //    var latitude: CLLocationDegrees {
 //        return Double(i_nkoord ?? 0)
 //    }
-//    
+//
 //    var longitude: CLLocationDegrees {
 //        return Double(i_ekoord ?? 0)
 //    }
@@ -53,53 +53,53 @@
 import Foundation
 import MapKit
 
-// Feature Collection Model
 struct FeatureCollection: Decodable {
     let features: [Feature]
 }
 
-// Individual Feature Model
 struct Feature: Identifiable, Decodable {
     let id: String
     let geometry: Geometry
     let properties: Properties
 }
 
-// Geometry Model (Point-based)
-// GeoJSON convention is [longitude, latitude]
 struct Geometry: Decodable {
-    let type: String
-    let coordinates: [Double]
+    //let type: String
+    let coordinates: [[[Double]]]
 }
 
-// Properties Model (Updated to Match OGC API JSON)
+extension Geometry {
+  /// Grabs the first point of the first ring of a Polygon
+  var firstCoordinate: CLLocationCoordinate2D? {
+    guard
+      let exterior = coordinates.first,
+      let pair     = exterior.first,
+      pair.count >= 2
+    else { return nil }
+    return CLLocationCoordinate2D(latitude: pair[1], longitude: pair[0])
+  }
+}
+
 struct Properties: Decodable {
-    let address_key: UUID?
-    let building_key: UUID?
-    let address_fin: String?
-    let address_swe: String?
-    let postal_office_fin: String?
-    let postal_office_swe: String?
-    let address_number: Int?
-    let address_name_fin: String?
-    let address_name_swe: String?
-    let number_part_of_address_number: Int?
-    let number_part_of_address_number2: Int?
-    let municipality_number: String?
-    let subdivision_letter_of_address_number: String?
-    let subdivision_letter_of_address_number2: String?
-    let postal_code: String?
-    let location_srid: Int?
-    let modified_timestamp_utc: String?
-}
 
-// Extension to Extract Latitude & Longitude
-extension Feature {
-    var latitude: CLLocationDegrees {
-        return geometry.coordinates.count > 1 ? geometry.coordinates[1] : 0.0
-    }
-
-    var longitude: CLLocationDegrees {
-        return geometry.coordinates.count > 0 ? geometry.coordinates[0] : 0.0
-    }
+    let vtj_prt: String?
+    let tyyppi: String?
+    let tila: String?
+    let i_raktilav: Double?
+    let i_nkoord: Int?
+    let i_ekoord: Int?
+    let i_kokala: Double?
+    let i_kerrosala: Double?
+    let i_kerrlkm: Double?
+    let i_kellarala: Double?
+    let i_huoneistojen_lkm: Double?
+    let d_ashuoala: Double?
+    let c_valmpvm: Date?
+    let c_kiinteistotunnus: String?
+    let c_hissi: String?
+    let katunimi_suomi: String?
+    let osoitenumero: String?
+    let postinumero: String?
+    let paivitetty_tietopalveluun: Date?
+    let tietopalvelu_id: Int!
 }

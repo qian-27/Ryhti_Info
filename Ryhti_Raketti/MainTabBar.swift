@@ -11,7 +11,12 @@ struct MainTabBar: View {
                     Text("Map")
                 }
             
-            TestListView()
+//            OGCInfoCard()
+//                .tabItem {
+//                    Image(systemName: "magnifyingglass")
+//                    Text("Search")
+//                }
+            WFSInfoCard()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")

@@ -1,20 +1,55 @@
 import SwiftUI
 import MapKit
 
+struct Landmark: Identifiable {
+    let id = UUID()
+    let title: String
+    let coordinate: CLLocationCoordinate2D
+}
+
+private let sampleLandmarks: [Landmark] = [
+    Landmark(title: "Helsinki Cathedral", coordinate: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9522)),
+    Landmark(title: "Uspenski Cathedral", coordinate: CLLocationCoordinate2D(latitude: 60.1685, longitude: 24.9602)),
+    Landmark(title: "Temppeliaukio Church", coordinate: CLLocationCoordinate2D(latitude: 60.17306, longitude: 24.92528))
+]
+
 struct MapView: View {
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9384),
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    )
+    @State private var poiLandmarks: [Landmark] = []
+    
     var body: some View {
-        Map (initialPosition: .region(region)) // takes a camera position on the initialized region
-            .mapControlVisibility(.hidden)
-        
-        
+        Map(initialPosition: .region(region)) {
+            ForEach(poiLandmarks) { landmark in
+                Marker(landmark.title, coordinate: landmark.coordinate)
+                    .tint(.red)
+            }
+        }
+        .mapControlVisibility(.hidden)
+        .task {
+            fetchPOIs()
+        }
     }
     
-    // Create a private computed variable that holds the region information for the map.
-    private var region: MKCoordinateRegion {
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9384),
-            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-        )
+    private func fetchPOIs() {
+        let request = MKLocalPointsOfInterestRequest(center: region.center, radius: 5000)
+        if #available(iOS 18.0, *) {
+            request.pointOfInterestFilter = MKPointOfInterestFilter(including: [.landmark])
+        } else {
+            // Fallback on earlier versions
+        }
+        let search = MKLocalSearch(request: request)
+        search.start { response, error in
+            guard let items = response?.mapItems else { return }
+            poiLandmarks = items.map { item in
+                Landmark(
+                    title: item.name ?? "Unknown",
+                    coordinate: item.placemark.coordinate
+                )
+            }
+        }
     }
 }
 
