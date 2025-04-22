@@ -49,12 +49,14 @@ struct OGCInfoCard: View {
                             .padding([.top, .bottom], 20)
                         
                         // Map View
-                        Map(initialPosition: .region(MKCoordinateRegion(
-                            center: CLLocationCoordinate2D(
-                                latitude: building.latitude,
-                                longitude: building.longitude
-                            ),
-                            span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+                        Map(position: .constant(.region(
+                            MKCoordinateRegion(
+                                center: CLLocationCoordinate2D(
+                                    latitude: building.latitude,
+                                    longitude: building.longitude
+                                ),
+                                span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+                            )
                         ))) {
                             Marker("Building Location", coordinate: CLLocationCoordinate2D(
                                 latitude: building.latitude,

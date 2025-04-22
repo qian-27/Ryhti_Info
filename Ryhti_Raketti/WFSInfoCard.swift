@@ -24,7 +24,7 @@
 //      }
 //      return .init(
 //        center: coord,
-//        span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+//        span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
 //      )
 //    }
 //    
