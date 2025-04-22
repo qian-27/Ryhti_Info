@@ -6,8 +6,8 @@ struct SettingsView: View {
             List {
                 Text("General")
                 Text("Language")
-                Text("Privacy Policy")
-                Text("About the App")
+                NavigationLink("Privacy Policy", destination: PrivacyPage())
+                NavigationLink("About the App", destination: AboutPage())
                 NavigationLink("Credit", destination: CreditPage())
             }
             .listStyle(SidebarListStyle())
