@@ -31,3 +31,13 @@ struct MainTabBar: View {
 #Preview {
     MainTabBar()
 }
+
+//#Preview {
+//    ContentView()
+//        .environment(\.locale, Locale(identifier: "en_EN"))
+//}
+//
+//#Preview("Finnish") {
+//    ContentView()
+//        .environment(\.locale, Locale(identifier: "fi_FI"))
+//}
