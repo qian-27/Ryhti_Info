@@ -98,22 +98,40 @@ struct OGCInfoCard: View {
     }
     
     // Fetch data using OGC API
-    private func fetchData(for streetName: String) {
-        print("Fetching data for street name:", streetName) // Debug input
+    private func fetchData(for rawInput: String) {
+        print("rawInput: '\(rawInput)'")
         
-        OGCDataService().fetchBuildings(streetName: streetName) { result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let buildings):
-                    self.buildings = buildings
-                    print("Fetched buildings:", buildings)
-                    print("Fetched buildings count:", buildings.count)
-                case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                    print("Error fetching data:", error)
+        // Trim off any leading/trailing spaces or newlines
+        let trimmed = rawInput.trimmingCharacters(in: .whitespacesAndNewlines)
+        print("trimmed: '\(trimmed)'")
+        
+        // Lowercase everything
+        let lowercasedInput = trimmed.lowercased()
+        print("lowercasedInput: '\(lowercasedInput)'")
+        
+        // Capitalize first letter of each word
+        let normalizedInput = lowercasedInput.capitalized
+        print("normalizedInput: '\(normalizedInput)'")
+        
+        // Split into tokens for filter
+        let tokens = normalizedInput.split(separator: " ")
+        print("tokens: \(tokens)")
+        
+        // Fetch using the fully normalized string
+            OGCDataService().fetchBuildings(streetName: normalizedInput) { result in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let buildings):
+                        self.buildings = buildings
+                        self.errorMessage = nil
+                        print("Fetched buildings count:", buildings.count)
+                    case .failure(let error):
+                        self.errorMessage = error.localizedDescription
+                        print("Error fetching data:", error)
+                    }
                 }
             }
-        }
+        
     }
 
     // Corrected SmallMap function for map rendering
@@ -134,7 +152,7 @@ struct OGCInfoCard: View {
 }
 
 // SwiftUI Preview Provider
-struct TestListView_Previews: PreviewProvider {
+struct OGCInfoCard_Previews: PreviewProvider {
     static var previews: some View {
         OGCInfoCard()
     }

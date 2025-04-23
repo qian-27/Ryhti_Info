@@ -315,34 +315,43 @@
 //}
 
 
+// OGCDataService.swift
 import Foundation
 import Combine
 
-// Helper function to build the URL with a manually specified percent-encoded query.
+// Builds a GeoServer URL that either:
+//  - returns all items on a street if the input has no trailing number, or
+//  - returns only the exact house number if one is provided.
 func buildURL(for streetName: String) -> URL? {
     let baseURLString = "https://paikkatiedot.ymparisto.fi/geoserver/ryhti_building/ogc/features/v1/collections/open_address/items"
-    guard var components = URLComponents(string: baseURLString) else { return nil }
-    
-    // Create the filter expression in plain text.
-    // For example, if streetName is "Ylikorvantie", the filter becomes:
-    // "address_fin ILIKE '%Ylikorvantie%'"
-    let filterExpression = "address_fin ILIKE '%\(streetName)%'"
-    
-    // Encode the filter expression.
-    guard let encodedFilter = filterExpression.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+    guard var components = URLComponents(string: baseURLString) else {
         return nil
     }
-    
-    // Manually build the entire query string so that the f parameter remains exactly as desired.
-    // We want: f=application/geo%2Bjson&filter-lang=cql-text&filter=<encodedFilter>
+
+    // 1) Normalize & split
+    let trimmed = streetName.trimmingCharacters(in: .whitespacesAndNewlines)
+    let parts   = trimmed.split(separator: " ")
+
+    // 2) Build CQL: exact street+number if last token is numeric; otherwise street-only
+    let cql: String
+    if let last = parts.last, let num = Int(last) {
+        // street + number case
+        let street = parts.dropLast().joined(separator: " ")
+        cql = "address_name_fin ILIKE '\(street)' AND number_part_of_address_number=\(num)"
+    } else {
+        // street-only case
+        cql = "address_name_fin ILIKE '\(trimmed)'"
+    }
+
+    // 3) Percent-encode and assemble the full query string
+    guard let encodedFilter = cql.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+        return nil
+    }
     let queryString = "f=application/geo%2Bjson&filter-lang=cql-text&filter=\(encodedFilter)"
-    
-    // Assign the manually built query string.
     components.percentEncodedQuery = queryString
-    
+
     return components.url
 }
-
 
 class OGCDataService {
     func fetchBuildings(streetName: String, completion: @escaping (Result<[Feature], Error>) -> Void) {
