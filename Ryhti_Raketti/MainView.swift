@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct MainTabBar: View {
+struct MainView: View {
     
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
@@ -11,16 +11,16 @@ struct MainTabBar: View {
                     Text("Map")
                 }
             
-            OGCInfoCard()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
-//            WFSInfoCard()
+//            OGCInfoCard()
 //                .tabItem {
 //                    Image(systemName: "magnifyingglass")
 //                    Text("Search")
 //                }
+            WFSInfoCard()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                }
             
             SettingsView()
                 .tabItem {
@@ -34,15 +34,15 @@ struct MainTabBar: View {
 }
 
 #Preview {
-    MainTabBar()
+    MainView()
 }
 
 //#Preview {
-//    MainTabBar()
+//    MainView()
 //        .environment(\.locale, Locale(identifier: "en_EN"))
 //}
 //
 //#Preview("Finnish") {
-//    MainTabBar()
+//    MainView()
 //        .environment(\.locale, Locale(identifier: "fi_FI"))
 //}
