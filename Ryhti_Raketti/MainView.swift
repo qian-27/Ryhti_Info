@@ -11,16 +11,16 @@ struct MainView: View {
                     Text("Map")
                 }
             
-//            OGCInfoCard()
-//                .tabItem {
-//                    Image(systemName: "magnifyingglass")
-//                    Text("Search")
-//                }
-            WFSInfoCard()
+            OGCInfoCard()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
+//            WFSInfoCard()
+//                .tabItem {
+//                    Image(systemName: "magnifyingglass")
+//                    Text("Search")
+//                }
             
             SettingsView()
                 .tabItem {

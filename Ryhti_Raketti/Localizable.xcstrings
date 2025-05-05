@@ -11,6 +11,16 @@
         }
       }
     },
+    "%@, %@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@, %3$@"
+          }
+        }
+      }
+    },
     "About Page" : {
 
     },
@@ -25,7 +35,16 @@
         }
       }
     },
+    "Address Number: %@" : {
+
+    },
+    "Address: %@" : {
+
+    },
     "Basement Area: %@ m2" : {
+
+    },
+    "Building Location" : {
 
     },
     "Building Type: %@" : {
@@ -107,10 +126,19 @@
         }
       }
     },
+    "Modified Timestamp UTC: %@" : {
+
+    },
     "Number of Flat: %@" : {
 
     },
     "Number of Floor: %@" : {
+
+    },
+    "Postal Code: %@" : {
+
+    },
+    "Postal Office: %@" : {
 
     },
     "Privacy Policy" : {
@@ -125,6 +153,9 @@
       }
     },
     "Property Identifier: %@" : {
+
+    },
+    "Retry" : {
 
     },
     "Search" : {
