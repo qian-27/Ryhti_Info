@@ -7,12 +7,6 @@ struct Landmark: Identifiable {
     let coordinate: CLLocationCoordinate2D
 }
 
-//private let sampleLandmarks: [Landmark] = [
-//    Landmark(title: "Helsinki Cathedral", coordinate: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9522)),
-//    Landmark(title: "Uspenski Cathedral", coordinate: CLLocationCoordinate2D(latitude: 60.1685, longitude: 24.9602)),
-//    Landmark(title: "Temppeliaukio Church", coordinate: CLLocationCoordinate2D(latitude: 60.17306, longitude: 24.92528))
-//]
-
 struct MapView: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9384),
