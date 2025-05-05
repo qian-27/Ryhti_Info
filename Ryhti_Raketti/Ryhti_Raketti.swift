@@ -9,26 +9,18 @@
 //    }
 //}
 
+
 import SwiftUI
 
 @main
-struct Ryhti_Raketti: App {
-    @State private var isActive = false
+struct RyhtiRakettiApp: App {
+    @StateObject private var languageManager = LanguageManager.shared
 
     var body: some Scene {
         WindowGroup {
-            if isActive {
-                MainView()
-            } else {
-                LaunchPlaceholderView()
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // 1 second fake loading
-                            withAnimation {
-                                isActive = true
-                            }
-                        }
-                    }
-            }
+            MainView()
+                .environmentObject(languageManager)
+                .environment(\.locale, languageManager.locale)
         }
     }
 }

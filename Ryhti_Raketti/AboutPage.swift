@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AboutPage: View {
     var body: some View {
-        Text("About Page")
+        Text("About the App")
             .navigationTitle("About the App")
     }
 }

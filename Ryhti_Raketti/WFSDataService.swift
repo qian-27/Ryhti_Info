@@ -30,7 +30,7 @@ class WFSDataService {
                
         
         guard URL(string: urlString) != nil else {
-            print("Invalid URL.")
+            print("Invalid URL. URL: \(urlString)")
             return
         }
         

@@ -1,8 +1,8 @@
 import SwiftUI
 
-struct CreditPage: View {
+struct CreditsPage: View {
     var body: some View {
         Text("Credits")
-            .navigationTitle("Credit")
+            .navigationTitle("Credits")
     }
 }
