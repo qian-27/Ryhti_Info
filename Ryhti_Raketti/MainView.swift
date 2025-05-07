@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct MainView: View {
-    
     @Environment(\.colorScheme) var colorScheme
+    
+    @AppStorage("selectedAPI") private var selectedAPI: String = APIProvider.wfs.rawValue
+
     var body: some View {
         TabView {
             MapView()
@@ -10,18 +12,19 @@ struct MainView: View {
                     Image(systemName: "globe")
                     Text("Map")
                 }
-            
-//            OGCInfoCard()
-//                .tabItem {
-//                    Image(systemName: "magnifyingglass")
-//                    Text("Search")
-//                }
-            WFSInfoCard()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
+
+            Group {
+                if selectedAPI == APIProvider.ogc.rawValue {
+                    OGCInfoCard()
+                } else {
+                    WFSInfoCard()
                 }
-            
+            }
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search")
+            }
+
             SettingsView()
                 .tabItem {
                     Image(systemName: "gear")
@@ -29,7 +32,6 @@ struct MainView: View {
                 }
         }
         .accentColor(colorScheme == .light ? .blue : .primary)
-        //.accentColor(.primary)
     }
 }
 
