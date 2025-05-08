@@ -19,11 +19,6 @@ struct SearchBar: View {
                 // makes sure the whole pill is tap‐sensitive
                 .contentShape(Rectangle())
 
-            
-//                .padding(.vertical, 17)
-//                .padding(.horizontal, 10)
-//                .padding(.trailing, 5)
-
                 .onSubmit {
                     onSearch()
                 }
