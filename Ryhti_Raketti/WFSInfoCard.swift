@@ -39,9 +39,9 @@ struct WFSInfoCard: View {
             if let errorMessage = errorMessage {
                 Text("Error: \(errorMessage)")
                     .foregroundColor(.red)
-                //            } else if buildings.isEmpty {
-                //                Text("No results found. Try another address.")
-                //                    .foregroundColor(.gray)
+//                            } else if buildings.isEmpty {
+//                                Text("No results found. Try another address.")
+//                                    .foregroundColor(.gray)
             } else {
                 List(buildings, id: \.id) { building in
                     VStack(alignment: .leading) {
@@ -70,8 +70,8 @@ struct WFSInfoCard: View {
                         
                         Text("Elevator: \(building.properties.c_hissi == "x" ? "Yes" : "No")") // Equipped with lift (x=Yes)
                         // When value is 'x', the text will display 'Yes', when value is nil the text will display "No"
-                        Text("Number of Floor: \(building.properties.i_kerrlkm != nil ? String(Int(building.properties.i_kerrlkm!)) : "N/A")") // Number of floors
-                        Text("Number of Flat: \(building.properties.i_huoneistojen_lkm != nil ? String(Int(building.properties.i_huoneistojen_lkm!)) : "N/A")") // Number of flats
+                        Text("Number of Floors: \(building.properties.i_kerrlkm != nil ? String(Int(building.properties.i_kerrlkm!)) : "N/A")") // Number of floors
+                        Text("Number of Flats: \(building.properties.i_huoneistojen_lkm != nil ? String(Int(building.properties.i_huoneistojen_lkm!)) : "N/A")") // Number of flats
                         Text("House Area: \(building.properties.d_ashuoala != nil ? String(building.properties.d_ashuoala!) : "N/A") m2") // Space used for housing (m2)
                         Text("Basement Area: \(building.properties.i_kellarala != nil ? String(building.properties.i_kellarala!) : "N/A") m2") // Basement area (m2)
                         Text("Floor Area: \(building.properties.i_kerrosala != nil ? String(building.properties.i_kerrosala!) : "N/A") m2") // Floor area

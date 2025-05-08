@@ -41,6 +41,12 @@
     "Address: %@" : {
 
     },
+    "API Provider" : {
+
+    },
+    "API Source" : {
+
+    },
     "Basement Area: %@ m2" : {
 
     },
@@ -48,6 +54,9 @@
 
     },
     "Building Type: %@" : {
+
+    },
+    "City of Helsinki" : {
 
     },
     "Completion Date: %@" : {
@@ -129,10 +138,10 @@
     "Modified Timestamp UTC: %@" : {
 
     },
-    "Number of Flat: %@" : {
+    "Number of Flats: %@" : {
 
     },
-    "Number of Floor: %@" : {
+    "Number of Floors: %@" : {
 
     },
     "Postal Code: %@" : {
@@ -156,6 +165,9 @@
 
     },
     "Retry" : {
+
+    },
+    "Ryhti" : {
 
     },
     "Search" : {
@@ -194,7 +206,7 @@
     "State of Building: %@" : {
 
     },
-    "Steert Name..." : {
+    "Street Name..." : {
 
     },
     "Total Area: %@ m2" : {
