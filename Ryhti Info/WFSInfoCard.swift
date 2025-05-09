@@ -7,28 +7,6 @@ struct WFSInfoCard: View {
     @State private var errorMessage: String?
     @State private var isLoading: Bool = false
     
-    // Define a date formatter to format the date into a readable string
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium // e.g., Sep 11, 2023
-        formatter.timeStyle = .none
-        return formatter
-    }()
-    
-    private func region(for building: Feature) -> MKCoordinateRegion {
-        guard let coord = building.geometry.firstCoordinate else {
-            // fallback to Helsinki center
-            return .init(
-                center: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9384),
-                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            )
-        }
-        return .init(
-            center: coord,
-            span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
-        )
-    }
-    
     var body: some View {
         ZStack {
             Color(.white)
@@ -46,27 +24,24 @@ struct WFSInfoCard: View {
     //                                    .foregroundColor(.gray)
                 } else {
                     List(buildings, id: \.id) { building in
-                        VStack(alignment: .leading) {
+//                        VStack(alignment: .leading) {
+                        VStack(alignment: .leading, spacing: 12) {
                             // Text("ID: \(building.id)")
                             
                             // Street Name + Street Number + Post Number
                             Text("\(building.properties.katunimi_suomi ?? "Unknown Street") \(building.properties.osoitenumero ?? ""), \(building.properties.postinumero ?? "Unknown Postal Code"), Helsinki")
                                 .font(.headline)
                                 .fontWeight(.bold)
-                                .padding([.top, .bottom], 10)
+//                                .padding([.top, .bottom], 10)
                             
-                            // Map View
-                            Map(position: .constant(.region(region(for: building)))) {
-                                // Use a Marker with the street name as title
-                                Marker(building.properties.katunimi_suomi ?? "", coordinate: building.geometry.firstCoordinate!)
-                            }
-                            .frame(height: 200)
-                            .cornerRadius(10)
-                            .mapStyle(.imagery)
+                            SmallMapView(
+                                region: building.mapRegion,
+                                title: building.properties.katunimi_suomi ?? "Location"
+                            )
                             
                             Text("Building Type: \(building.properties.tyyppi ?? "N/A")") // Type of building
                             Text("State of Building: \(building.properties.tila ?? "N/A")") // State of the building
-                            Text("Completion Date: \(building.properties.c_valmpvm.map { dateFormatter.string(from: $0) } ?? "N/A")")
+                            Text("Completion Date: \(building.properties.c_valmpvm.map { DateFormatter.buildingInfo.string(from: $0) } ?? "N/A")")
                             // Completion date (yyyy-mm-ddTHH:MM:SS)
                                 .padding(.bottom, 10)
                             
@@ -91,7 +66,7 @@ struct WFSInfoCard: View {
                             Text("Property Identifier: \(building.properties.c_kiinteistotunnus ?? "N/A")") // Property identifier
                                 .padding(.bottom, 10)
                             
-                            Text("Information Update Date: \(building.properties.paivitetty_tietopalveluun.map { dateFormatter.string(from: $0) } ?? "N/A")") // Date of update into the information service (yyyy-mm-dd)
+                            Text("Information Update Date: \(building.properties.paivitetty_tietopalveluun.map { DateFormatter.buildingInfo.string(from: $0) } ?? "N/A")") // Date of update into the information service (yyyy-mm-dd)
                                 .padding(.bottom, 10)
                         }
                         .padding()

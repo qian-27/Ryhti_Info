@@ -8,13 +8,21 @@ struct OGCInfoCard: View {
     @State private var errorMessage: String?
     @State private var isLoading: Bool = false
     
-    // Define a date formatter to format the date into a readable string
-    let dateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium // e.g., Sep 11, 2023
-        formatter.timeStyle = .none
-        return formatter
-    }()
+//    // Corrected SmallMap function for map rendering
+//    private func region(for building: OGCFeature) -> MKCoordinateRegion {
+//        let centerCoordinate = CLLocationCoordinate2D(
+//            latitude: building.latitude,
+//            longitude: building.longitude
+//        )
+//        
+//        print("Building ID: \(building.id)")
+//        print("Coordinates: Latitude \(building.latitude), Longitude \(building.longitude)")
+//
+//        return MKCoordinateRegion(
+//            center: centerCoordinate,
+//            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+//        )
+//    }
 
     var body: some View {
         ZStack {
@@ -49,24 +57,30 @@ struct OGCInfoCard: View {
                                 .fontWeight(.bold)
                                 .padding([.top, .bottom], 20)
                             
-                            // Map View
-                            Map(position: .constant(.region(
-                                MKCoordinateRegion(
-                                    center: CLLocationCoordinate2D(
-                                        latitude: building.latitude,
-                                        longitude: building.longitude
-                                    ),
-                                    span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
-                                )
-                            ))) {
-                                Marker("Building Location", coordinate: CLLocationCoordinate2D(
-                                    latitude: building.latitude,
-                                    longitude: building.longitude
-                                ))
-                            }
-                            .frame(height: 200)
-                            .cornerRadius(10)
-                            .mapStyle(.standard)
+//                            // Map View
+//                            Map(position: .constant(.region(
+//                                MKCoordinateRegion(
+//                                    center: CLLocationCoordinate2D(
+//                                        latitude: building.latitude,
+//                                        longitude: building.longitude
+//                                    ),
+//                                    span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+//                                )
+//                            ))) {
+//                                Marker("Building Location", coordinate: CLLocationCoordinate2D(
+//                                    latitude: building.latitude,
+//                                    longitude: building.longitude
+//                                ))
+//                            }
+//                            .frame(height: 200)
+//                            .cornerRadius(10)
+//                            .mapStyle(.standard)
+                            
+                            SmallMapView(
+                                region: building.mapRegion,
+                                title: "Building Location"
+                            )
+                            
                             
                             //                        Text("Address Key: \(building.properties.address_key?.uuidString ?? "Unknown")")
                             //                        Text("Building Key: \(building.properties.building_key?.uuidString ?? "Unknown")")
@@ -152,21 +166,7 @@ struct OGCInfoCard: View {
         
     }
 
-    // Corrected SmallMap function for map rendering
-    private func SmallMap(for building: OGCFeature) -> MKCoordinateRegion {
-        let centerCoordinate = CLLocationCoordinate2D(
-            latitude: building.latitude,
-            longitude: building.longitude
-        )
-        
-        print("Building ID: \(building.id)")
-        print("Coordinates: Latitude \(building.latitude), Longitude \(building.longitude)")
 
-        return MKCoordinateRegion(
-            center: centerCoordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-        )
-    }
 }
 
 // SwiftUI Preview Provider

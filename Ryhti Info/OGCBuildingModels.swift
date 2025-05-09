@@ -51,3 +51,17 @@ extension OGCFeature {
         return geometry.coordinates.count > 0 ? geometry.coordinates[0] : 0.0
     }
 }
+
+// Map Region Helper
+//MapKit region centered on this feature’s point.
+extension OGCFeature {
+    
+    var mapRegion: MKCoordinateRegion {
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: latitude,
+                                           longitude: longitude),
+            span: MKCoordinateSpan(latitudeDelta: 0.001,
+                                   longitudeDelta: 0.001)
+        )
+    }
+}
