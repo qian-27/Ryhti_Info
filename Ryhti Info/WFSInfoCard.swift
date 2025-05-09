@@ -12,17 +12,29 @@ struct WFSInfoCard: View {
         ZStack(alignment: .top) {
             VStack {
                 // Search bar for user input
+                // Trailing‐closure form
                 SearchBar(searchText: $searchText) {
                     fetchData(for: searchText)
                 }
                 
                 // Error handling UI
                 if let errorMessage = errorMessage {
-                    Text("Error: \(errorMessage)")
-                        .foregroundColor(.red)
+                    VStack {
+                        Text("Error: \(errorMessage)")
+                            .foregroundColor(.red)
+                        Button(action: {
+                            fetchData(for: searchText)
+                        }) {
+                            Text("Retry")
+                                .padding()
+                                .background(Color.blue)
+                                .foregroundColor(Color.primary)
+                                .cornerRadius(8)
+                        }
+                    }
                 } else if hasSearched && buildings.isEmpty {
                         Text("No data found with this address.")
-                            .foregroundColor(.gray)
+                        .foregroundColor(Color.secondary)
                             .padding(.top, 20)
                 } else {
                     List(buildings, id: \.id) { building in
@@ -71,12 +83,13 @@ struct WFSInfoCard: View {
                                 .padding(.bottom, 10)
                         }
                         .padding()
-                        .background(Color.white)
+                        .background(Color(UIColor.secondarySystemBackground))
                         .cornerRadius(20)
-                        .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 4)
+                        .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 4)
                         .listRowSeparator(.hidden)
                         .padding(.vertical, 2)
                     }
+                    .foregroundColor(Color.primary)
                     .listStyle(.plain)
                 }
             }

@@ -13,9 +13,10 @@ struct OGCInfoCard: View {
         ZStack(alignment: .top) {
             VStack {
                 // Search bar for user input
-                SearchBar(searchText: $searchText, onSearch: {
+                // Trailing‐closure form
+                SearchBar(searchText: $searchText) {
                     fetchData(for: searchText)
-                })
+                }
                 
                 // Error handling UI
                 if let errorMessage = errorMessage {
@@ -28,13 +29,13 @@ struct OGCInfoCard: View {
                             Text("Retry")
                                 .padding()
                                 .background(Color.blue)
-                                .foregroundColor(.white)
+                                .foregroundColor(Color.primary)
                                 .cornerRadius(8)
                         }
                     }
                 } else if hasSearched && buildings.isEmpty {
                         Text("No data found with this address.")
-                            .foregroundColor(.gray)
+                            .foregroundColor(Color.secondary)
                             .padding(.top, 20)
                 } else {
                     // Display buildings list
@@ -73,12 +74,13 @@ struct OGCInfoCard: View {
                             
                             }
                         .padding()
-                        .background(Color.white)
+                        .background(Color(UIColor.secondarySystemBackground))
                         .cornerRadius(20)
-                        .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 4)
+                        .shadow(color: .black.opacity(0.2), radius: 6, x: 0, y: 4)
                         .listRowSeparator(.hidden)
                         .padding(.vertical, 2)
                         }
+                    .foregroundColor(Color.primary)
                     .listStyle(.plain)
                     }
             }
@@ -91,6 +93,7 @@ struct OGCInfoCard: View {
             LoadingOverlay(isShowing: $isLoading)
         }
     }
+    
     
     // Data Fetching
     private func fetchData(for rawInput: String) {
