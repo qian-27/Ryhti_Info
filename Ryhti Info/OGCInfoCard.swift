@@ -88,14 +88,21 @@ struct OGCInfoCard: View {
                             Text("Modified Timestamp UTC: \(building.properties.modified_timestamp_utc ?? "Unknown")")
                             
                             }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 4)
+                        .listRowSeparator(.hidden)
+                        .padding(.vertical, 2)
                         }
+                    .listStyle(.plain)
                     }
 
     ////            .listStyle(.plain)
     //            .navigationTitle("Search Buildings")
     //            .navigationBarTitleDisplayMode(.large)
             }
-            .cornerRadius(30)
+            //whole screen
             .padding()
             
             // —— Full-screen overlay sits on top

@@ -31,6 +31,8 @@ struct WFSInfoCard: View {
     
     var body: some View {
         ZStack {
+            Color(.white)
+              .ignoresSafeArea()   // cover the whole screen
             VStack {
                 SearchBar(searchText: $searchText) {
                     fetchData(for: searchText)
@@ -92,15 +94,24 @@ struct WFSInfoCard: View {
                             Text("Information Update Date: \(building.properties.paivitetty_tietopalveluun.map { dateFormatter.string(from: $0) } ?? "N/A")") // Date of update into the information service (yyyy-mm-dd)
                                 .padding(.bottom, 10)
                         }
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(20)
+                        .shadow(color: .black.opacity(0.1), radius: 6, x: 0, y: 4)
+                        .listRowSeparator(.hidden)
+                        .padding(.vertical, 2)
                     }
+                    .listStyle(.plain)
                 }
             }
-            .cornerRadius(30)
+            //whole screen
             .padding()
+
             
             // —— Full-screen overlay sits on top
             LoadingOverlay(isShowing: $isLoading)
         }
+
     }
     
     // Fetch data using WFS API
