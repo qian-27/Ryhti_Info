@@ -13,6 +13,7 @@ struct SettingsView: View {
                         Text("Ryhti").tag(APIProvider.ogc.rawValue)
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    .listRowBackground(Color.clear)
                 }
 
                 Section(header: Text("General")) {

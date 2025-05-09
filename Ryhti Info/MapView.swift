@@ -10,7 +10,7 @@ struct Landmark: Identifiable {
 struct MapView: View {
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 60.1699, longitude: 24.9384),
-        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+        span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
     )
     @State private var poiLandmarks: [Landmark] = []
     
