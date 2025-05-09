@@ -8,20 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		0526A09F2DBD567300EB6E89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0526A09E2DBD567300EB6E89 /* LaunchScreen.storyboard */; };
+		05598E152DCCF7FB005C4778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05598E032DCCF7FB005C4778 /* Assets.xcassets */; };
+		05598E162DCCF7FB005C4778 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05598DFF2DCCF7FB005C4778 /* Preview Assets.xcassets */; };
+		05598E172DCCF7FB005C4778 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 05598E072DCCF7FB005C4778 /* Localizable.xcstrings */; };
+		05598E182DCCF7FB005C4778 /* OGCInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0C2DCCF7FB005C4778 /* OGCInfoCard.swift */; };
+		05598E192DCCF7FB005C4778 /* LoadingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E052DCCF7FB005C4778 /* LoadingOverlay.swift */; };
+		05598E1A2DCCF7FB005C4778 /* WFSBuildingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E112DCCF7FB005C4778 /* WFSBuildingModel.swift */; };
+		05598E1B2DCCF7FB005C4778 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E062DCCF7FB005C4778 /* LoadingView.swift */; };
+		05598E1C2DCCF7FB005C4778 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E102DCCF7FB005C4778 /* SettingsView.swift */; };
+		05598E1D2DCCF7FB005C4778 /* WFSDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E122DCCF7FB005C4778 /* WFSDataService.swift */; };
+		05598E1E2DCCF7FB005C4778 /* OGCBuildingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0A2DCCF7FB005C4778 /* OGCBuildingModels.swift */; };
+		05598E1F2DCCF7FB005C4778 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E022DCCF7FB005C4778 /* APIProvider.swift */; };
+		05598E202DCCF7FB005C4778 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E082DCCF7FB005C4778 /* MainView.swift */; };
+		05598E212DCCF7FB005C4778 /* PrivacyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0D2DCCF7FB005C4778 /* PrivacyPage.swift */; };
+		05598E222DCCF7FB005C4778 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E092DCCF7FB005C4778 /* MapView.swift */; };
+		05598E232DCCF7FB005C4778 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E012DCCF7FB005C4778 /* AboutPage.swift */; };
+		05598E242DCCF7FB005C4778 /* OGCDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0B2DCCF7FB005C4778 /* OGCDataService.swift */; };
+		05598E252DCCF7FB005C4778 /* CreditPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E042DCCF7FB005C4778 /* CreditPage.swift */; };
+		05598E262DCCF7FB005C4778 /* Ryhti_Raketti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0E2DCCF7FB005C4778 /* Ryhti_Raketti.swift */; };
+		05598E272DCCF7FB005C4778 /* WFSInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E132DCCF7FB005C4778 /* WFSInfoCard.swift */; };
+		05598E282DCCF7FB005C4778 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0F2DCCF7FB005C4778 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0526A09E2DBD567300EB6E89 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05598DFF2DCCF7FB005C4778 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05598E012DCCF7FB005C4778 /* AboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
+		05598E022DCCF7FB005C4778 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
+		05598E032DCCF7FB005C4778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05598E042DCCF7FB005C4778 /* CreditPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditPage.swift; sourceTree = "<group>"; };
+		05598E052DCCF7FB005C4778 /* LoadingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingOverlay.swift; sourceTree = "<group>"; };
+		05598E062DCCF7FB005C4778 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		05598E072DCCF7FB005C4778 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		05598E082DCCF7FB005C4778 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		05598E092DCCF7FB005C4778 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		05598E0A2DCCF7FB005C4778 /* OGCBuildingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGCBuildingModels.swift; sourceTree = "<group>"; };
+		05598E0B2DCCF7FB005C4778 /* OGCDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGCDataService.swift; sourceTree = "<group>"; };
+		05598E0C2DCCF7FB005C4778 /* OGCInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGCInfoCard.swift; sourceTree = "<group>"; };
+		05598E0D2DCCF7FB005C4778 /* PrivacyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPage.swift; sourceTree = "<group>"; };
+		05598E0E2DCCF7FB005C4778 /* Ryhti_Raketti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ryhti_Raketti.swift; sourceTree = "<group>"; };
+		05598E0F2DCCF7FB005C4778 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		05598E102DCCF7FB005C4778 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		05598E112DCCF7FB005C4778 /* WFSBuildingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFSBuildingModel.swift; sourceTree = "<group>"; };
+		05598E122DCCF7FB005C4778 /* WFSDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFSDataService.swift; sourceTree = "<group>"; };
+		05598E132DCCF7FB005C4778 /* WFSInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WFSInfoCard.swift; sourceTree = "<group>"; };
 		05B6CCA32CF9CC2C00960D42 /* Ryhti_Raketti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryhti_Raketti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		05B6CCA52CF9CC2C00960D42 /* Ryhti_Raketti */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Ryhti_Raketti;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		05B6CCA02CF9CC2C00960D42 /* Frameworks */ = {
@@ -34,6 +66,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05598E002DCCF7FB005C4778 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				05598DFF2DCCF7FB005C4778 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05598E142DCCF7FB005C4778 /* Ryhti Info */ = {
+			isa = PBXGroup;
+			children = (
+				05598E002DCCF7FB005C4778 /* Preview Content */,
+				05598E012DCCF7FB005C4778 /* AboutPage.swift */,
+				05598E022DCCF7FB005C4778 /* APIProvider.swift */,
+				05598E032DCCF7FB005C4778 /* Assets.xcassets */,
+				05598E042DCCF7FB005C4778 /* CreditPage.swift */,
+				05598E052DCCF7FB005C4778 /* LoadingOverlay.swift */,
+				05598E062DCCF7FB005C4778 /* LoadingView.swift */,
+				05598E072DCCF7FB005C4778 /* Localizable.xcstrings */,
+				05598E082DCCF7FB005C4778 /* MainView.swift */,
+				05598E092DCCF7FB005C4778 /* MapView.swift */,
+				05598E0A2DCCF7FB005C4778 /* OGCBuildingModels.swift */,
+				05598E0B2DCCF7FB005C4778 /* OGCDataService.swift */,
+				05598E0C2DCCF7FB005C4778 /* OGCInfoCard.swift */,
+				05598E0D2DCCF7FB005C4778 /* PrivacyPage.swift */,
+				05598E0E2DCCF7FB005C4778 /* Ryhti_Raketti.swift */,
+				05598E0F2DCCF7FB005C4778 /* SearchBar.swift */,
+				05598E102DCCF7FB005C4778 /* SettingsView.swift */,
+				05598E112DCCF7FB005C4778 /* WFSBuildingModel.swift */,
+				05598E122DCCF7FB005C4778 /* WFSDataService.swift */,
+				05598E132DCCF7FB005C4778 /* WFSInfoCard.swift */,
+			);
+			path = "Ryhti Info";
+			sourceTree = "<group>";
+		};
 		05AACFD42D886C1800A81EF9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -45,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0526A09E2DBD567300EB6E89 /* LaunchScreen.storyboard */,
-				05B6CCA52CF9CC2C00960D42 /* Ryhti_Raketti */,
+				05598E142DCCF7FB005C4778 /* Ryhti Info */,
 				05AACFD42D886C1800A81EF9 /* Frameworks */,
 				05B6CCA42CF9CC2C00960D42 /* Products */,
 			);
@@ -74,9 +141,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				05B6CCA52CF9CC2C00960D42 /* Ryhti_Raketti */,
-			);
 			name = Ryhti_Raketti;
 			packageProductDependencies = (
 			);
@@ -100,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 05B6CC9E2CF9CC2C00960D42 /* Build configuration list for PBXProject "Ryhti_Raketti" */;
+			buildConfigurationList = 05B6CC9E2CF9CC2C00960D42 /* Build configuration list for PBXProject "Ryhti Info" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -125,6 +189,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05598E152DCCF7FB005C4778 /* Assets.xcassets in Resources */,
+				05598E162DCCF7FB005C4778 /* Preview Assets.xcassets in Resources */,
+				05598E172DCCF7FB005C4778 /* Localizable.xcstrings in Resources */,
 				0526A09F2DBD567300EB6E89 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +203,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05598E182DCCF7FB005C4778 /* OGCInfoCard.swift in Sources */,
+				05598E192DCCF7FB005C4778 /* LoadingOverlay.swift in Sources */,
+				05598E1A2DCCF7FB005C4778 /* WFSBuildingModel.swift in Sources */,
+				05598E1B2DCCF7FB005C4778 /* LoadingView.swift in Sources */,
+				05598E1C2DCCF7FB005C4778 /* SettingsView.swift in Sources */,
+				05598E1D2DCCF7FB005C4778 /* WFSDataService.swift in Sources */,
+				05598E1E2DCCF7FB005C4778 /* OGCBuildingModels.swift in Sources */,
+				05598E1F2DCCF7FB005C4778 /* APIProvider.swift in Sources */,
+				05598E202DCCF7FB005C4778 /* MainView.swift in Sources */,
+				05598E212DCCF7FB005C4778 /* PrivacyPage.swift in Sources */,
+				05598E222DCCF7FB005C4778 /* MapView.swift in Sources */,
+				05598E232DCCF7FB005C4778 /* AboutPage.swift in Sources */,
+				05598E242DCCF7FB005C4778 /* OGCDataService.swift in Sources */,
+				05598E252DCCF7FB005C4778 /* CreditPage.swift in Sources */,
+				05598E262DCCF7FB005C4778 /* Ryhti_Raketti.swift in Sources */,
+				05598E272DCCF7FB005C4778 /* WFSInfoCard.swift in Sources */,
+				05598E282DCCF7FB005C4778 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +262,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = UTC5WLX74U;
+				DEVELOPMENT_TEAM = 48PM9M3956;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -244,7 +328,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = UTC5WLX74U;
+				DEVELOPMENT_TEAM = 48PM9M3956;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -273,9 +357,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Ryhti_Raketti/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Ryhti Info/Preview Content\"";
 				DEVELOPMENT_TEAM = UTC5WLX74U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,6 +380,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucky.RyhtiRaketti.dev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -314,8 +400,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Ryhti_Raketti/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Ryhti Info/Preview Content\"";
 				DEVELOPMENT_TEAM = 48PM9M3956;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +419,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lucky.RyhtiRaketti.dev;
+				PRODUCT_BUNDLE_IDENTIFIER = Fi.libra.ryhti;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -349,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05B6CC9E2CF9CC2C00960D42 /* Build configuration list for PBXProject "Ryhti_Raketti" */ = {
+		05B6CC9E2CF9CC2C00960D42 /* Build configuration list for PBXProject "Ryhti Info" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				05B6CCAF2CF9CC2D00960D42 /* Debug */,

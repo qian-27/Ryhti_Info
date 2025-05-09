@@ -101,7 +101,6 @@ struct WFSInfoCard: View {
             // —— Full-screen overlay sits on top
             LoadingOverlay(isShowing: $isLoading)
         }
-
     }
     
     // Fetch data using WFS API
