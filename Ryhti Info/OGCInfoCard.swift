@@ -7,22 +7,6 @@ struct OGCInfoCard: View {
     @State private var buildings: [OGCFeature] = []
     @State private var errorMessage: String?
     @State private var isLoading: Bool = false
-    
-//    // Corrected SmallMap function for map rendering
-//    private func region(for building: OGCFeature) -> MKCoordinateRegion {
-//        let centerCoordinate = CLLocationCoordinate2D(
-//            latitude: building.latitude,
-//            longitude: building.longitude
-//        )
-//        
-//        print("Building ID: \(building.id)")
-//        print("Coordinates: Latitude \(building.latitude), Longitude \(building.longitude)")
-//
-//        return MKCoordinateRegion(
-//            center: centerCoordinate,
-//            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-//        )
-//    }
 
     var body: some View {
         ZStack {
@@ -53,28 +37,9 @@ struct OGCInfoCard: View {
                         VStack(alignment: .leading) {
                             // Building Address Information
                             Text("\(building.properties.address_fin ?? "Unknown Street"), \(building.properties.address_number.map(String.init) ?? "Unknown Address Number"), \(building.properties.postal_office_fin ?? "Unknown Postal Code")")
-                                .font(.title3)
+                                .font(.headline)
                                 .fontWeight(.bold)
-                                .padding([.top, .bottom], 20)
-                            
-//                            // Map View
-//                            Map(position: .constant(.region(
-//                                MKCoordinateRegion(
-//                                    center: CLLocationCoordinate2D(
-//                                        latitude: building.latitude,
-//                                        longitude: building.longitude
-//                                    ),
-//                                    span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
-//                                )
-//                            ))) {
-//                                Marker("Building Location", coordinate: CLLocationCoordinate2D(
-//                                    latitude: building.latitude,
-//                                    longitude: building.longitude
-//                                ))
-//                            }
-//                            .frame(height: 200)
-//                            .cornerRadius(10)
-//                            .mapStyle(.standard)
+                                .padding([.top, .bottom], 10)
                             
                             SmallMapView(
                                 region: building.mapRegion,
@@ -111,10 +76,6 @@ struct OGCInfoCard: View {
                         }
                     .listStyle(.plain)
                     }
-
-    ////            .listStyle(.plain)
-    //            .navigationTitle("Search Buildings")
-    //            .navigationBarTitleDisplayMode(.large)
             }
             //whole screen
             .padding()

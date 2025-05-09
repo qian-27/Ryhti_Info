@@ -24,15 +24,14 @@ struct WFSInfoCard: View {
     //                                    .foregroundColor(.gray)
                 } else {
                     List(buildings, id: \.id) { building in
-//                        VStack(alignment: .leading) {
-                        VStack(alignment: .leading, spacing: 12) {
+                        VStack(alignment: .leading) {
                             // Text("ID: \(building.id)")
                             
                             // Street Name + Street Number + Post Number
                             Text("\(building.properties.katunimi_suomi ?? "Unknown Street") \(building.properties.osoitenumero ?? ""), \(building.properties.postinumero ?? "Unknown Postal Code"), Helsinki")
                                 .font(.headline)
                                 .fontWeight(.bold)
-//                                .padding([.top, .bottom], 10)
+                                .padding([.top, .bottom], 10)
                             
                             SmallMapView(
                                 region: building.mapRegion,
