@@ -82,9 +82,8 @@ struct WFSInfoCard: View {
             }
             // ensure VStack fills the ZStack and sticks to the top
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-            
-            //whole screen
-            .padding()
+            // Only horizontal (and optionally top) padding, not bottom
+            .padding([.horizontal, .top])
             
             // —— Full-screen overlay sits on top
             LoadingOverlay(isShowing: $isLoading)
