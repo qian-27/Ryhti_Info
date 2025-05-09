@@ -6,22 +6,24 @@ struct WFSInfoCard: View {
     @State private var buildings: [Feature] = []
     @State private var errorMessage: String?
     @State private var isLoading: Bool = false
+    @State private var hasSearched: Bool = false
     
     var body: some View {
-        ZStack {
-            Color(.white)
-              .ignoresSafeArea()   // cover the whole screen
+        ZStack(alignment: .top) {
             VStack {
+                // Search bar for user input
                 SearchBar(searchText: $searchText) {
                     fetchData(for: searchText)
                 }
                 
+                // Error handling UI
                 if let errorMessage = errorMessage {
                     Text("Error: \(errorMessage)")
                         .foregroundColor(.red)
-    //                            } else if buildings.isEmpty {
-    //                                Text("No results found. Try another address.")
-    //                                    .foregroundColor(.gray)
+                } else if hasSearched && buildings.isEmpty {
+                        Text("No data found with this address.")
+                            .foregroundColor(.gray)
+                            .padding(.top, 20)
                 } else {
                     List(buildings, id: \.id) { building in
                         VStack(alignment: .leading) {
@@ -78,57 +80,30 @@ struct WFSInfoCard: View {
                     .listStyle(.plain)
                 }
             }
+            // ensure VStack fills the ZStack and sticks to the top
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            
             //whole screen
             .padding()
-
             
             // —— Full-screen overlay sits on top
             LoadingOverlay(isShowing: $isLoading)
         }
-
+        
     }
     
-    // Fetch data using WFS API
-    private func fetchData(for rawInput: String) {
-        isLoading = true
-        
-        print("rawInput: '\(rawInput)'")
-        
-        
-        // Trim off any leading/trailing spaces or newlines
-        let trimmed = rawInput.trimmingCharacters(in: .whitespacesAndNewlines)
-        print("trimmed: '\(trimmed)'")
-        
-        // Lowercase everything
-        let lowercasedInput = trimmed.lowercased()
-        print("lowercasedInput: '\(lowercasedInput)'")
-        
-        // Capitalize first letter of each word
-        let normalizedInput = lowercasedInput.capitalized
-        print("normalizedInput: '\(normalizedInput)'")
-        
-        // Split into tokens for filter
-        let tokens = normalizedInput.split(separator: " ")
-        print("tokens: \(tokens)")
+    // Data Fetching
 
-        // Fetch using the fully normalized string
-        WFSDataService().fetchBuildings(streetName: normalizedInput) { result in
-            DispatchQueue.main.async {
-                // stop loading no matter what
-                defer { isLoading = false }
-                
-                switch result {
-                case .success(let buildings):
-                    self.buildings = buildings
-                    // Print the buildings to inspect the data structure in the console
-                    print("Fetched buildings:", buildings)
-                    print("Fetched buildings count:", buildings.count)
-                case .failure(let error):
-                    self.errorMessage = error.localizedDescription
-                    print("Error fetching data:", error)
-                }
-            }
-        }
+    // Fetch data using the WFS API, normalizing input and handling loading/error state.
+    private func fetchData(for rawInput: String) {
+        performFetchData(
+            for: rawInput,
+            serviceFetch: WFSDataService().fetchBuildings,
+            onResult:    { self.buildings = $0; self.errorMessage = nil },
+            onError:     { self.errorMessage = $0 },
+            onLoading:   { self.isLoading = $0 },
+            onSearched:  { self.hasSearched = $0 }
+        )
     }
 }
 

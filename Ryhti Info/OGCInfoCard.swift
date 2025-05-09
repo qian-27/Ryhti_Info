@@ -1,21 +1,22 @@
 import SwiftUI
 import MapKit
-import CoreLocation
+//import CoreLocation
 
 struct OGCInfoCard: View {
     @State private var searchText: String = ""
     @State private var buildings: [OGCFeature] = []
     @State private var errorMessage: String?
     @State private var isLoading: Bool = false
+    @State private var hasSearched: Bool = false
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             VStack {
                 // Search bar for user input
                 SearchBar(searchText: $searchText, onSearch: {
                     fetchData(for: searchText)
                 })
-
+                
                 // Error handling UI
                 if let errorMessage = errorMessage {
                     VStack {
@@ -31,6 +32,10 @@ struct OGCInfoCard: View {
                                 .cornerRadius(8)
                         }
                     }
+                } else if hasSearched && buildings.isEmpty {
+                        Text("No data found with this address.")
+                            .foregroundColor(.gray)
+                            .padding(.top, 20)
                 } else {
                     // Display buildings list
                     List(buildings, id: \.id) { building in
@@ -77,6 +82,9 @@ struct OGCInfoCard: View {
                     .listStyle(.plain)
                     }
             }
+            // ensure VStack fills the ZStack and sticks to the top
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            
             //whole screen
             .padding()
             
@@ -85,49 +93,19 @@ struct OGCInfoCard: View {
         }
     }
     
-// Fetch data using OGC API
+    // Data Fetching
     private func fetchData(for rawInput: String) {
-        isLoading = true
-        
-        print("rawInput: '\(rawInput)'")
-        
-        // Trim off any leading/trailing spaces or newlines
-        let trimmed = rawInput.trimmingCharacters(in: .whitespacesAndNewlines)
-        print("trimmed: '\(trimmed)'")
-        
-        // Lowercase everything
-        let lowercasedInput = trimmed.lowercased()
-        print("lowercasedInput: '\(lowercasedInput)'")
-        
-        // Capitalize first letter of each word
-        let normalizedInput = lowercasedInput.capitalized
-        print("normalizedInput: '\(normalizedInput)'")
-        
-        // Split into tokens for filter
-        let tokens = normalizedInput.split(separator: " ")
-        print("tokens: \(tokens)")
-        
-        // Fetch using the fully normalized string
-            OGCDataService().fetchBuildings(streetName: normalizedInput) { result in
-                DispatchQueue.main.async {
-                    // stop loading no matter what
-                    defer { isLoading = false }
-                    
-                    switch result {
-                    case .success(let buildings):
-                        self.buildings = buildings
-                        self.errorMessage = nil
-                        print("Fetched buildings count:", buildings.count)
-                    case .failure(let error):
-                        self.errorMessage = error.localizedDescription
-                        print("Error fetching data:", error)
-                    }
-                }
-            }
-        
+        performFetchData(
+            for: rawInput,
+            serviceFetch: OGCDataService().fetchBuildings,
+            onResult:    { self.buildings = $0; self.errorMessage = nil },
+            onError:     { self.errorMessage = $0
+                self.hasSearched = true
+            },
+            onLoading:   { self.isLoading = $0 },
+            onSearched:  { self.hasSearched = $0 }
+        )
     }
-
-
 }
 
 // SwiftUI Preview Provider

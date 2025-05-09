@@ -30,6 +30,7 @@
 		05598E282DCCF7FB005C4778 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05598E0F2DCCF7FB005C4778 /* SearchBar.swift */; };
 		05FF7C7F2DCDF75300D1D9DF /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF7C7E2DCDF75300D1D9DF /* DateFormatter.swift */; };
 		05FF7C832DCDFD8400D1D9DF /* SmallMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF7C822DCDFD8400D1D9DF /* SmallMapView.swift */; };
+		05FF7C852DCE22B400D1D9DF /* FetchDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FF7C842DCE22B400D1D9DF /* FetchDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		05B6CCA32CF9CC2C00960D42 /* Ryhti_Raketti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ryhti_Raketti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05FF7C7E2DCDF75300D1D9DF /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		05FF7C822DCDFD8400D1D9DF /* SmallMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallMapView.swift; sourceTree = "<group>"; };
+		05FF7C842DCE22B400D1D9DF /* FetchDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				05598E122DCCF7FB005C4778 /* WFSDataService.swift */,
 				05598E132DCCF7FB005C4778 /* WFSInfoCard.swift */,
 				05FF7C822DCDFD8400D1D9DF /* SmallMapView.swift */,
+				05FF7C842DCE22B400D1D9DF /* FetchDataHelper.swift */,
 				05FF7C7E2DCDF75300D1D9DF /* DateFormatter.swift */,
 			);
 			path = "Ryhti Info";
@@ -221,6 +224,7 @@
 				05598E202DCCF7FB005C4778 /* MainView.swift in Sources */,
 				05598E212DCCF7FB005C4778 /* PrivacyPage.swift in Sources */,
 				05598E222DCCF7FB005C4778 /* MapView.swift in Sources */,
+				05FF7C852DCE22B400D1D9DF /* FetchDataHelper.swift in Sources */,
 				05598E232DCCF7FB005C4778 /* AboutPage.swift in Sources */,
 				05598E242DCCF7FB005C4778 /* OGCDataService.swift in Sources */,
 				05598E252DCCF7FB005C4778 /* CreditPage.swift in Sources */,

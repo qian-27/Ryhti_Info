@@ -50,9 +50,6 @@
     "Basement Area: %@ m2" : {
 
     },
-    "Building Location" : {
-
-    },
     "Building Type: %@" : {
 
     },
@@ -136,6 +133,9 @@
       }
     },
     "Modified Timestamp UTC: %@" : {
+
+    },
+    "No data found with this address." : {
 
     },
     "Number of Flats: %@" : {
