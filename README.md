@@ -1,5 +1,7 @@
 # Ryhti_Info
-Final Project
+Ryhti Info is an iOS application built with Swift that uses Finnish government open data to provide accessible and structured information about buildings. The project focuses on transforming complex public datasets into a clear, user-friendly mobile experience.
+
+This app was developed as a learning-oriented project, with an emphasis on iOS development fundamentals, API-based data handling, and user-centric design.
 
 ## Preview
 
