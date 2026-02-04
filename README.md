@@ -1,7 +1,40 @@
 # Ryhti_Info
 Ryhti Info is an iOS application built with Swift that uses Finnish government open data to provide accessible and structured information about buildings. The project focuses on transforming complex public datasets into a clear, user-friendly mobile experience.
 
+## Motivation
+I want to learning by doing， and practice basic fundamentals and practice apple design priciples
 This app was developed as a learning-oriented project, with a strong focus on strengthening my iOS development fundamentals and building a practical end-to-end product. The project allowed me to explore modern SwiftUI patterns, implement API-based data handling, and practice user-centric interface design with real-world Finnish building data.
+
+## Testing & User Feedback
+Ryhti Info was tested extensively using both the Xcode iOS simulator and physical iPhone devices.  
+The simulator enabled rapid iteration for UI layout, navigation flow, and functionality, while real-device testing surfaced practical issues related to performance, keyboard behavior, and search reliability that were not always visible in the simulator.
+
+For the final demonstration, the application was distributed via TestFlight, allowing installation on multiple iPhones without an App Store release. This made it possible to gather informal usability feedback from friends and acquaintances, which contributed to identifying and refining several usability and performance issues.
+
+### Key Findings & Issues Identified
+1. **Map thumbnail in building cards** – users requested a small map preview for quicker location recognition.  
+2. **Finnish special characters** (“ä”, “ö”) occasionally failed in simulator searches, though physical devices behaved correctly.  
+3. **Address parsing improvements** – searches with street numbers (e.g., “Mannerheimintie 12”) were unreliable.  
+4. **City-level filtering** – duplicate street names across cities (e.g., *Aleksanterinkatu*) caused ambiguous results.  
+5. **Return key triggering search** – the return key initially did not start a search.  
+6. **Keyboard labelling** – the default “return” label was unclear; “Search” was preferred.  
+7. **Keyboard dismissal** – users found it difficult to hide the keyboard without an explicit control.  
+8. **Lack of loading indicators** – no visual feedback during data retrieval.  
+9. **Empty search feedback** – no message was shown when no results matched the query.  
+10. **Irregular address formats** – inputs like “13a” or ranges like “30–34” were not handled properly.  
+11. **Automatic language detection** – correctly switches between Finnish and English based on system settings.  
+12. **Manual language selection** – users requested an in-app language toggle.  
+13. **API source switching** – users wanted to switch between Ryhti and Helsinki open data APIs.  
+14. **Dark mode issues** – certain text elements were unreadable in dark mode.  
+15. **Finnish language typos** – small mistakes in Finnish UI strings required correction.
+
+### Current Status
+- Issues 1, 3, 5, 6, 8, 9, 13, 14, and 15 have been fully resolved.  
+- Issue 2 appears only in the simulator and does not affect physical devices.  
+- Issue 11 has functioned correctly throughout testing, while Issue 12 is still pending implementation.  
+- Issues 4, 7, and 10 are planned for future development.
+
+This comprehensive testing process was essential in improving the app’s overall usability, stability, and quality.
 
 ## Preview
 
