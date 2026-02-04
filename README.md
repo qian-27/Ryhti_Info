@@ -1,4 +1,4 @@
-# Ryhti_Info
+# Ryhti Info
 Ryhti Info is an iOS application built with Swift that uses Finnish government open data to provide accessible and structured information about buildings. The project focuses on transforming complex public datasets into a clear, user-friendly mobile experience.
 
 ## Motivation
@@ -12,21 +12,21 @@ The simulator enabled rapid iteration for UI layout, navigation flow, and functi
 For the final demonstration, the application was distributed via TestFlight, allowing installation on multiple iPhones without an App Store release. This made it possible to gather informal usability feedback from friends and acquaintances, which contributed to identifying and refining several usability and performance issues.
 
 ### Key Findings & Issues Identified
-1. **Map thumbnail in building cards** – users requested a small map preview for quicker location recognition.  
-2. **Finnish special characters** (“ä”, “ö”) occasionally failed in simulator searches, though physical devices behaved correctly.  
-3. **Address parsing improvements** – searches with street numbers (e.g., “Mannerheimintie 12”) were unreliable.  
-4. **City-level filtering** – duplicate street names across cities (e.g., *Aleksanterinkatu*) caused ambiguous results.  
-5. **Return key triggering search** – the return key initially did not start a search.  
-6. **Keyboard labelling** – the default “return” label was unclear; “Search” was preferred.  
-7. **Keyboard dismissal** – users found it difficult to hide the keyboard without an explicit control.  
-8. **Lack of loading indicators** – no visual feedback during data retrieval.  
-9. **Empty search feedback** – no message was shown when no results matched the query.  
-10. **Irregular address formats** – inputs like “13a” or ranges like “30–34” were not handled properly.  
-11. **Automatic language detection** – correctly switches between Finnish and English based on system settings.  
-12. **Manual language selection** – users requested an in-app language toggle.  
-13. **API source switching** – users wanted to switch between Ryhti and Helsinki open data APIs.  
-14. **Dark mode issues** – certain text elements were unreadable in dark mode.  
-15. **Finnish language typos** – small mistakes in Finnish UI strings required correction.
+1. **Map thumbnail in building cards**: users requested a small map preview for quicker location recognition.  
+2. **Finnish special characters**: (“ä”, “ö”) occasionally failed in simulator searches, though physical devices behaved correctly.  
+3. **Address parsing improvements**: searches with street numbers (e.g., “Mannerheimintie 12”) were unreliable.  
+4. **City-level filtering**: duplicate street names across cities (e.g., *Aleksanterinkatu*) caused ambiguous results.  
+5. **Return key triggering search**: the return key initially did not start a search.  
+6. **Keyboard labelling**: the default “return” label was unclear; “Search” was preferred.  
+7. **Keyboard dismissal**: users found it difficult to hide the keyboard without an explicit control.  
+8. **Lack of loading indicators**: no visual feedback during data retrieval.  
+9. **Empty search feedback**: no message was shown when no results matched the query.  
+10. **Irregular address formats**: inputs like “13a” or ranges like “30–34” were not handled properly.  
+11. **Automatic language detection**: correctly switches between Finnish and English based on system settings.  
+12. **Manual language selection**: users requested an in-app language toggle.  
+13. **API source switching**: users wanted to switch between Ryhti and Helsinki open data APIs.  
+14. **Dark mode issues**: certain text elements were unreadable in dark mode.  
+15. **Finnish language typos**: small mistakes in Finnish UI strings required correction.
 
 ### Current Status
 - Issues 1, 3, 5, 6, 8, 9, 13, 14, and 15 have been fully resolved.  
@@ -66,3 +66,35 @@ This comprehensive testing process was essential in improving the app’s overal
 <img src="https://github.com/user-attachments/assets/d917d608-867a-4822-b258-d4adb12fa3a4" width="200" alt="B_H" />
 <img src="https://github.com/user-attachments/assets/0dd9034b-57f3-46b7-a40e-53fa4e232e3a" width="200" alt="B_SWITCH2" />
 <img src="https://github.com/user-attachments/assets/68e4b9cc-14d5-4d6a-ad84-329fc786d0e2" width="200" alt="B_R" />
+
+## Data Sources & API Integration
+Ryhti Info integrates two open-data APIs to retrieve building information.
+
+- **City of Helsinki WFS API**  
+  Provides detailed building attributes for Helsinki, including floor counts, area sizes, room numbers, and elevator availability.  
+
+  License: Creative Commons Attribution 4.0 International (CC BY 4.0)  
+  Endpoint: https://kartta.hel.fi/ws/geoserver/avoindata/wfs
+
+- **Ryhti OGC API**  
+  A newer nationwide service offering building data across all of Finland. Although it currently exposes a more limited attribute set, it is expected to expand over time.  
+
+  License: Creative Commons Attribution 4.0 International (CC BY 4.0)  
+  Endpoint: https://paikkatiedot.ymparisto.fi/geoserver/ryhti_building/ogc/features/v1
+
+### API Comparison
+| Aspect | Helsinki WFS API | Ryhti OGC API |
+|-------|------------------|----------------|
+| Provider | City of Helsinki | Finnish Environment Institute (SYKE) |
+| API Type | WFS (Web Feature Service) | OGC Features API |
+| Coverage | Helsinki only | Whole Finland |
+| Dataset | Rakennukset_alue_rekisteritiedot | Completed Buildings |
+| Standard | OGC WFS | OGC API Standards |
+| License | CC BY 4.0 | CC BY 4.0 |
+| Purpose in App | Detailed building info for Helsinki | Basic building data nationwide |
+
+### Implementation Notes
+Both APIs were tested and integrated into the application.  
+A built-in API switch allows users to choose their preferred data source depending on coverage or detail requirements.  
+
+This design also anticipates a future scenario where the Helsinki WFS service may be deprecated in favor of the Ryhti API, ensuring the application remains flexible and future-proof.
